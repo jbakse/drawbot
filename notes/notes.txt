@@ -1,0 +1,8 @@
+Drawbot_Control
+	Parse SVG				Parser
+	Parse BOT				Parser
+	Instructions Model		Instruction_Set
+	Interface				?
+	Bot Driver				Bot_Driver
+	Settings				Settings
+	Visualizer/Sim			Visualizer
