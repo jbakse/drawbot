@@ -1,4 +1,6 @@
 class Instruction_Set {
-	 Instruction_Set() {
-	 }
+	ArrayList instructions;
+
+	Instruction_Set() {
+	}
 }

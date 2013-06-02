@@ -12,7 +12,7 @@ Println console;
 float timeSliderValue;
 
 class User_Interface {
-	Interface() {
+	User_Interface() {
 		previewRect = new Rectangle(10, 10, 400, 200);
 		listRect = new Rectangle(420, 25, 370, 380);
 		controlRect = new Rectangle(10, 220, 400, 370);
@@ -71,5 +71,9 @@ class User_Interface {
 
 		timeSliderValue = 1.0;
 
+	}
+
+	void draw(){
+		
 	}
 }
