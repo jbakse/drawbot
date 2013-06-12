@@ -30,50 +30,66 @@ class Parser {
 	}
 
 	Instruction_Set parseSVG(String file) {
-		return new Instruction_Set();
+		println("Parse File: "+ file);
+		
+		if (!checkPath(file)) {
+			println("File doesn't exist! "+file);
+			return null;
+		}
 
-		// println("Parse File: "+ file);
-		// //Read Data
-		// svgShape = RG.loadShape(file);
-		// if (svgShape == null) {
-		// 	println("Failed to read SVG data");
-		// 	return;
-		// }
+		//Read Data
+		svgShape = RG.loadShape(file);
+		if (svgShape == null) {
+			println("Failed to read SVG data");
+			return null;
+		}
 
-		// //Polygonize
-		// RG.setPolygonizer(RG.ADAPTATIVE);
-		// RPoint[][] pointPaths;
-		// pointPaths = svgShape.getPointsInPaths();
-		// if (pointPaths == null || pointPaths.length == 0) {
-		// 	println("Failed to polygonize vector data");
-		// 	return;
-		// }
+		//Polygonize
+		RG.setPolygonizer(RG.ADAPTATIVE);
+		RPoint[][] pointPaths;
+		pointPaths = svgShape.getPointsInPaths();
+		if (pointPaths == null || pointPaths.length == 0) {
+			println("Failed to polygonize vector data");
+			return null;
+		}
 
-		// //Build Segments
-		// segments = new ArrayList();
+		//Build Instructions
+		float posX = 0;
+		float posY = 0;
 
-		// for (int i = 0; i<pointPaths.length; i++) {
-		// 	if (pointPaths[i] != null && pointPaths.length > 0) {
-		// 		segments.add(new Segment("move", pointPaths[i][0].x, pointPaths[i][0].y));
-		// 		for (int j = 1; j<pointPaths[i].length; j++) {
-		// 			segments.add(new Segment("draw", pointPaths[i][j].x, pointPaths[i][j].y));
-		// 		}
-		// 	}
-		// }
+		boolean penDown = false;
+
+		Instruction_Set instructions = new Instruction_Set();
+
+
+		for (int i = 0; i < pointPaths.length; i++) {
+			if (pointPaths[i] != null && pointPaths.length > 0) {
+				for (int j = 0; j<pointPaths[i].length; j++) {
+					if (j == 0){
+						instructions.appendPenUp();
+					}
+					if (j == 1){
+						instructions.appendPenDown();
+					}
+					int x = (int)((pointPaths[i][j].x * settings.xStepsPerPoint) - posX);
+					int y = (int)((pointPaths[i][j].y * settings.yStepsPerPoint) - posY);
+					instructions.appendMove(x, y);
+					posX += x;
+					posY += y;
+				}
+			}
+		}
+
+		return instructions;
 
 		// botController.loadSegments(segments);
 	}
-}
 
-
-
-class Segment {
-	String type; //move, draw
-	float x;
-	float y;
-	Segment (String _type, float _x, float _y) {
-		type = _type; 
-		x = _x; 
-		y = _y;
+	boolean checkPath(String path){
+		File f = new File(path);
+		return f.exists(); 
 	}
 }
+
+
+

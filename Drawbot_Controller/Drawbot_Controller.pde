@@ -24,7 +24,11 @@ void setup() {
 	parser = new Parser();
 	visualizer = new Visualizer();
 
-	//instructionSet = parser.parseSVG("default.svg");
+	println(dataPath("default.svg"));
+	instructionSet = parser.parseSVG(dataPath("default.svg"));
+	println("Instruction Set");
+	println(instructionSet);
+	
 }
 
 void draw() {

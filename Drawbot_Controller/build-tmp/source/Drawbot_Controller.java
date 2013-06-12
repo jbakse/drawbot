@@ -45,7 +45,11 @@ public void setup() {
 	parser = new Parser();
 	visualizer = new Visualizer();
 
-	//instructionSet = parser.parseSVG("default.svg");
+	println(dataPath("default.svg"));
+	instructionSet = parser.parseSVG(dataPath("default.svg"));
+	println("Instruction Set");
+	println(instructionSet);
+	
 }
 
 public void draw() {
@@ -219,6 +223,67 @@ class Instruction_Set {
 	ArrayList instructions;
 
 	Instruction_Set() {
+		instructions = new ArrayList();
+	}
+
+	public void appendPen(int _pos){
+		instructions.add(new Instruction("pen", new int[]{_pos}));
+	}
+
+	public void appendPenUp(){
+		instructions.add(new Instruction("pen", new int[]{settings.penUpAngle}));
+	}
+
+	public void appendPenDown(){
+		instructions.add(new Instruction("pen", new int[]{settings.penDownAngle}));
+	}
+
+	public void appendMove(int _x, int _y){
+		instructions.add(new Instruction("move", new int[]{_x, _y}));
+	}
+
+	public void appendSpeed(int _speed){
+		instructions.add(new Instruction("speed", new int[]{_speed}));
+	}
+
+	public String toString() {
+		String output = "";
+		for (int i = 0; i < instructions.size(); i++){
+			output += instructions.get(i).toString() + "\n";
+		}
+		return output;
+	}
+
+}
+
+class Instruction {
+	String name;
+	int code;
+	int params[];
+	
+	Instruction(String _name, int _params[]) {
+		name = _name;
+		if (_name.equals("pen")){
+			code = 1;
+		}
+		else if (_name.equals("move")){
+			code = 2;
+		}
+		else if(_name.equals("reset")){
+			code = 3;
+		}
+		else if(_name.equals("speed")){
+			code = 8;
+		}
+		params = _params;
+	}
+
+	public String toString() {
+		String output = name + " (" + code + "): ";
+		for (int i = 0; i < params.length; i++){
+			output += params[i] + ", ";
+		}
+		return output;
 	}
 }
 RShape svgShape;
@@ -253,61 +318,80 @@ class Parser {
 	}
 
 	public Instruction_Set parseSVG(String file) {
-		return new Instruction_Set();
+		println("Parse File: "+ file);
+		
+		if (!checkPath(file)) {
+			println("File doesn't exist! "+file);
+			return null;
+		}
 
-		// println("Parse File: "+ file);
-		// //Read Data
-		// svgShape = RG.loadShape(file);
-		// if (svgShape == null) {
-		// 	println("Failed to read SVG data");
-		// 	return;
-		// }
+		//Read Data
+		svgShape = RG.loadShape(file);
+		if (svgShape == null) {
+			println("Failed to read SVG data");
+			return null;
+		}
 
-		// //Polygonize
-		// RG.setPolygonizer(RG.ADAPTATIVE);
-		// RPoint[][] pointPaths;
-		// pointPaths = svgShape.getPointsInPaths();
-		// if (pointPaths == null || pointPaths.length == 0) {
-		// 	println("Failed to polygonize vector data");
-		// 	return;
-		// }
+		//Polygonize
+		RG.setPolygonizer(RG.ADAPTATIVE);
+		RPoint[][] pointPaths;
+		pointPaths = svgShape.getPointsInPaths();
+		if (pointPaths == null || pointPaths.length == 0) {
+			println("Failed to polygonize vector data");
+			return null;
+		}
 
-		// //Build Segments
-		// segments = new ArrayList();
+		//Build Instructions
+		float posX = 0;
+		float posY = 0;
 
-		// for (int i = 0; i<pointPaths.length; i++) {
-		// 	if (pointPaths[i] != null && pointPaths.length > 0) {
-		// 		segments.add(new Segment("move", pointPaths[i][0].x, pointPaths[i][0].y));
-		// 		for (int j = 1; j<pointPaths[i].length; j++) {
-		// 			segments.add(new Segment("draw", pointPaths[i][j].x, pointPaths[i][j].y));
-		// 		}
-		// 	}
-		// }
+		boolean penDown = false;
+
+		Instruction_Set instructions = new Instruction_Set();
+
+
+		for (int i = 0; i < pointPaths.length; i++) {
+			if (pointPaths[i] != null && pointPaths.length > 0) {
+				for (int j = 0; j<pointPaths[i].length; j++) {
+					if (j == 0){
+						instructions.appendPenUp();
+					}
+					if (j == 1){
+						instructions.appendPenDown();
+					}
+					int x = (int)((pointPaths[i][j].x * settings.xStepsPerPoint) - posX);
+					int y = (int)((pointPaths[i][j].y * settings.yStepsPerPoint) - posY);
+					instructions.appendMove(x, y);
+					posX += x;
+					posY += y;
+				}
+			}
+		}
+
+		return instructions;
 
 		// botController.loadSegments(segments);
 	}
-}
 
-
-
-class Segment {
-	String type; //move, draw
-	float x;
-	float y;
-	Segment (String _type, float _x, float _y) {
-		type = _type; 
-		x = _x; 
-		y = _y;
+	public boolean checkPath(String path){
+		File f = new File(path);
+		return f.exists(); 
 	}
 }
+
+
+
 class Settings {
 	public float drawScale = 9.7656f;
 	// 3,906 steps across board / 400 pixels in preview
 	public int penUpAngle = 75;
 	public int penDownAngle = 82;
 	public int desiredSpeed = 50;
-
+	public float xStepsPerPoint = 2.77f;// 200/72;
+	public float yStepsPerPoint = 2.77f;
+	
 	Settings() {
+	
 	}
 }
 ControlP5 cp5;
@@ -377,6 +461,7 @@ class User_Interface {
 		.setColor(color(200))
 		.setColorBackground(color(0, 100))
 		.setColorForeground(color(255, 100));
+		
 		console = cp5.addConsole(consoleTextArea);
 
 
@@ -410,25 +495,25 @@ class Visualizer {
 
 	 public void draw(){
 		//draw vector data
-		pushMatrix();
-		{
-		translate(10, 10);
-		noFill();
-		PVector pos = new PVector(0, 0);
-		for (int i = 0; i < segments.size() * timeSliderValue; i++) {
-			Segment seg = (Segment)segments.get(i);
-			if (seg.type == "move") {
-			stroke(200, 100, 100);
-			}
-			else if (seg.type == "draw") {
-			stroke(100, 200, 100);
-			}
-			line(pos.x, pos.y, seg.x, seg.y);
-			pos.x = seg.x;
-			pos.y = seg.y;
-		}
-		}
-		popMatrix();
+		// pushMatrix();
+		// {
+		// translate(10, 10);
+		// noFill();
+		// PVector pos = new PVector(0, 0);
+		// for (int i = 0; i < segments.size() * timeSliderValue; i++) {
+		// 	Segment seg = (Segment)segments.get(i);
+		// 	if (seg.type == "move") {
+		// 	stroke(200, 100, 100);
+		// 	}
+		// 	else if (seg.type == "draw") {
+		// 	stroke(100, 200, 100);
+		// 	}
+		// 	line(pos.x, pos.y, seg.x, seg.y);
+		// 	pos.x = seg.x;
+		// 	pos.y = seg.y;
+		// }
+		// }
+		// popMatrix();
 	 }
 }
   static public void main(String[] passedArgs) {
