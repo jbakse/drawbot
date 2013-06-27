@@ -6,7 +6,8 @@ class Settings {
 	public int desiredSpeed = 50;
 	public float xStepsPerPoint = 2.77;// 200/72;
 	public float yStepsPerPoint = 2.77;
-	
+	public float xStepsPerPixel = 10;
+	public float yStepsPerPixel = 10;
 	Settings() {
 	
 	}

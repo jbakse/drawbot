@@ -24,17 +24,16 @@ void setup() {
 	parser = new Parser();
 	visualizer = new Visualizer();
 
-	println(dataPath("default.svg"));
 	instructionSet = parser.parseSVG(dataPath("default.svg"));
-	println("Instruction Set");
-	println(instructionSet);
-	
+	displayInstructions(instructionSet);
+
 }
 
 void draw() {
 	background(50);
 	fill(255);
 	userInterface.draw();
+	visualizer.draw(instructionSet, (int)(instructionSet.instructions.size() * timeSliderValue));
 	// botDriver.step();
 }
 
@@ -68,6 +67,18 @@ boolean checkSelectionMade(File selection){
 	println("User Selected: " + selection.getAbsolutePath());
 	return true;
 }
+
+
+/////////////////////////////////////////////////////
+void displayInstructions(Instruction_Set instructionSet){
+	instructionListBox.clear();
+	for (int i=0; i < instructionSet.instructions.size(); i++) {
+		ListBoxItem lbi = instructionListBox.addItem(((Instruction)instructionSet.instructions.get(i)).toCommand(), i);
+		// lbi.setColorBackground(0xffff0000);
+	}
+}
+
+
 
 public void startBot(int theValue) {
 	// botDriver.start();

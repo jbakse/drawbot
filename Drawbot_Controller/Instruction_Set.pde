@@ -64,4 +64,13 @@ class Instruction {
 		}
 		return output;
 	}
+
+
+	String toCommand() {
+		String output =  code + ",";
+		for (int i = 0; i < params.length; i++){
+			output += params[i] + ",";
+		}
+		return output;
+	}
 }
