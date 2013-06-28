@@ -12,7 +12,7 @@ class Visualizer {
 			noFill();
 			PVector pos = new PVector(0, 0);
 			color c = color(100, 200, 200);
-			println(""+currentInstruction);
+			
 			for (int i = 0; i < instructionSet.instructions.size(); i++) {
 				Instruction instruction = (Instruction)instructionSet.instructions.get(i);
 				if (i > currentInstruction) {

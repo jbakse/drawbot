@@ -1,11 +1,12 @@
 import controlP5.*;
 import geomerative.*;
 import processing.serial.*;
+
 import java.io.File;
 
 Settings settings;
 User_Interface userInterface;
-// Bot_Driver botDriver;
+Bot_Driver botDriver;
 Parser parser;
 Visualizer visualizer;
 Instruction_Set instructionSet;
@@ -20,7 +21,7 @@ void setup() {
 	//initialize components
 	settings = new Settings();
 	userInterface = new User_Interface();
-	// botDriver = new Bot_Driver();
+	botDriver = new Bot_Driver(this);
 	parser = new Parser();
 	visualizer = new Visualizer();
 
@@ -68,8 +69,13 @@ boolean checkSelectionMade(File selection){
 	return true;
 }
 
+public void startBot(int theValue){
+	botDriver.start();
+}
 
 /////////////////////////////////////////////////////
+
+
 void displayInstructions(Instruction_Set instructionSet){
 	instructionListBox.clear();
 	for (int i=0; i < instructionSet.instructions.size(); i++) {
@@ -80,6 +86,6 @@ void displayInstructions(Instruction_Set instructionSet){
 
 
 
-public void startBot(int theValue) {
-	// botDriver.start();
+void serialEvent(Serial port) {
+	botDriver.serialEvent(port);
 }
