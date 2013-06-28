@@ -82,23 +82,59 @@ void setSpeed(int val)
 void moveSteps(long xSteps, long ySteps)
 {
   xMotor.setSpeed(mySpeed);
-  
-  if (xSteps > 0) {
-    xMotor.step(xSteps, FORWARD, SINGLE);
-  }else if(xSteps < 0) {
-    xMotor.step(-xSteps, BACKWARD, SINGLE);
-  }  
-  
   yMotor.setSpeed(mySpeed);
-   
-  if (ySteps > 0) {
-    yMotor.step(ySteps, BACKWARD, SINGLE);
-  }else if(ySteps < 0) {
-    yMotor.step(-ySteps, FORWARD, SINGLE);
+
+  int xDirection = FORWARD;
+  if (xSteps < 0) xDirection = BACKWARD;
+
+  int yDirection = BACKWARD; //y is wired backwards
+  if (ySteps < 0) yDirection = FORWARD;
+
+  if (xSteps != 0 && ySteps != 0){
+    float yDelta = abs(ySteps) / (float)abs(xSteps);
+    float yAccumulator = 0;
+    for (int x = 0; x < abs(xSteps); x++){
+      xMotor.step(1, xDirection, SINGLE);
+      yAccumulator += yDelta;
+      while (yAccumulator > 1){
+        yMotor.step(1, yDirection, SINGLE);
+        yAccumulator -= 1; 
+      }
+    }
   } 
-  
+  else if (xSteps == 0) {
+    for (int y = 0; y < abs(ySteps); y++){
+      yMotor.step(1, yDirection, SINGLE);
+    }
+  } 
+  else if (ySteps == 0) {
+    for (int x = 0; x < abs(xSteps); x++){
+      xMotor.step(1, xDirection, SINGLE);
+    }
+  }
+
+
+  //  
+  //  if (xSteps > 0) {
+  //    xMotor.step(xSteps, FORWARD, SINGLE);
+  //  }else if(xSteps < 0) {
+  //    xMotor.step(-xSteps, BACKWARD, SINGLE);
+  //  }  
+  //  
+  //  
+  //   
+  //  if (ySteps > 0) {
+  //    yMotor.step(ySteps, BACKWARD, SINGLE);
+  //  }else if(ySteps < 0) {
+  //    yMotor.step(-ySteps, FORWARD, SINGLE);
+  //  } 
+  //  
   Serial.println("done");
 }
+
+
+
+
 
 
 
