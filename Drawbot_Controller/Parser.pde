@@ -60,7 +60,7 @@ class Parser {
 		boolean penDown = false;
 
 		Instruction_Set instructions = new Instruction_Set();
-
+		instructions.appendSpeed(settings.desiredSpeed);
 
 		for (int i = 0; i < pointPaths.length; i++) {
 			if (pointPaths[i] != null && pointPaths.length > 0) {
