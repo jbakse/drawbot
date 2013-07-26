@@ -1,0 +1,46 @@
+sharing
+	more photos?
+	move presentation to justinbakse.com
+		expand
+	get BOM on github
+	get vectors on github
+
+
+power over rails test
+	annodized layer insullates electricity
+
+
+speed tests
+	horizontal
+		max stable speed 100
+		200 was farily stable
+		400 major skipped steps
+
+	vertical
+		max stable speed 100
+		200 was farily stable
+		400 major skipped steps
+		shakes in moderate speeds
+
+	45 down left
+		runs smooth
+		looks good at speeds 50 through 250
+		wobbles a higher speeds
+
+	1/3 slope 
+		runs about as smooth as 45, a little more wobbles, but looks like hardware rigidity rather than software issue
+
+change stepper timing to get smoother diaginal lines test
+
+acceleration test
+	used the serial buffer to buffer commands
+	sent accellerated lines for square
+	helped with wobble significantly with same top speed.
+
+max speed test
+
+new shield?
+	add stop switches
+
+new laser horizontal and vertical cars
+shaft colar for better mate

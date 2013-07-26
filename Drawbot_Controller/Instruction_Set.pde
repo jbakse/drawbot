@@ -4,30 +4,39 @@ class Instruction_Set {
 	Instruction_Set() {
 		instructions = new ArrayList();
 	}
+	
+	void appendBot(String _bot) {
+		String[] parts = _bot.split(",");
+		int[] params = new int[parts.length-1];
+		for (int i = 1; i < parts.length; i++){
+			params[i-1] = Integer.parseInt(parts[i].trim());
+		}
+		instructions.add(new Instruction(Integer.parseInt(parts[0].trim()), params)); 
+	}
 
-	void appendPen(int _pos){
+	void appendPen(int _pos) {
 		instructions.add(new Instruction("pen", new int[]{_pos}));
 	}
 
-	void appendPenUp(){
+	void appendPenUp() {
 		instructions.add(new Instruction("pen", new int[]{settings.penUpAngle}));
 	}
 
-	void appendPenDown(){
+	void appendPenDown() {
 		instructions.add(new Instruction("pen", new int[]{settings.penDownAngle}));
 	}
 
-	void appendMove(int _x, int _y){
+	void appendMove(int _x, int _y) {
 		instructions.add(new Instruction("move", new int[]{_x, _y}));
 	}
 
-	void appendSpeed(int _speed){
+	void appendSpeed(int _speed) {
 		instructions.add(new Instruction("speed", new int[]{_speed}));
 	}
 
 	String toString() {
 		String output = "";
-		for (int i = 0; i < instructions.size(); i++){
+		for (int i = 0; i < instructions.size(); i++) {
 			output += instructions.get(i).toString() + "\n";
 		}
 		return output;
@@ -57,6 +66,11 @@ class Instruction {
 		params = _params;
 	}
 
+	Instruction(int _code, int _params[]) {
+		code = _code;
+		params = _params;
+	}
+
 	String toString() {
 		String output = name + " (" + code + "): ";
 		for (int i = 0; i < params.length; i++){
@@ -71,6 +85,7 @@ class Instruction {
 		for (int i = 0; i < params.length; i++){
 			output += params[i] + ",";
 		}
+		output += "\n";
 		return output;
 	}
 }

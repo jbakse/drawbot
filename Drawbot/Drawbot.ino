@@ -10,6 +10,7 @@ Servo penServo;
 
 //state
 int mySpeed;
+int stepType = INTERLEAVE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
 
 void setup() {
   Serial.begin(9600);
@@ -84,7 +85,7 @@ void moveSteps(long xSteps, long ySteps)
   xMotor.setSpeed(mySpeed);
   yMotor.setSpeed(mySpeed);
 
-  int xDirection = FORWARD;
+  int xDirection = FORWARD;  
   if (xSteps < 0) xDirection = BACKWARD;
 
   int yDirection = BACKWARD; //y is wired backwards
@@ -94,22 +95,22 @@ void moveSteps(long xSteps, long ySteps)
     float yDelta = abs(ySteps) / (float)abs(xSteps);
     float yAccumulator = 0;
     for (int x = 0; x < abs(xSteps); x++){
-      xMotor.step(1, xDirection, SINGLE);
+      xMotor.step(1, xDirection, stepType);
       yAccumulator += yDelta;
       while (yAccumulator > 1){
-        yMotor.step(1, yDirection, SINGLE);
+        yMotor.step(1, yDirection, stepType);
         yAccumulator -= 1; 
       }
     }
   } 
   else if (xSteps == 0) {
     for (int y = 0; y < abs(ySteps); y++){
-      yMotor.step(1, yDirection, SINGLE);
+      yMotor.step(1, yDirection, stepType);
     }
   } 
   else if (ySteps == 0) {
     for (int x = 0; x < abs(xSteps); x++){
-      xMotor.step(1, xDirection, SINGLE);
+      xMotor.step(1, xDirection, stepType);
     }
   }
 

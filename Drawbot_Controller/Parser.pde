@@ -6,7 +6,28 @@ class Parser {
 		segments = new ArrayList();
 	}
 	Instruction_Set parseBOT(String file) {
-		return new Instruction_Set();
+		// return new Instruction_Set();
+
+		Instruction_Set instructions = new Instruction_Set();
+
+		try {
+			BufferedReader reader;
+			reader = createReader(file);  
+			String fileLine;
+			while ( (fileLine = reader.readLine()) != null) {
+				if (!fileLine.equals("")){
+					instructions.appendBot(fileLine);
+				}
+			}
+		}
+		catch(IOException e){
+			println("could not read the .bot file");
+		}
+	
+
+		return instructions;
+
+
 		// botController.instructions = new ArrayList();
 		// try {
 		// 	BufferedReader reader;

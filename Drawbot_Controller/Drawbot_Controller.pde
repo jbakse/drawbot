@@ -49,6 +49,7 @@ public void openSVG(int theValue) {
 void svgSelection(File selection) {
 	if (!checkSelectionMade(selection)) return;
 	instructionSet = parser.parseSVG(selection.getAbsolutePath());
+	displayInstructions(instructionSet);
 }
 
 public void openBOT(int theValue) {
@@ -58,6 +59,7 @@ public void openBOT(int theValue) {
 void botFileSelection(File selection) {
 	if (!checkSelectionMade(selection)) return;
 	instructionSet = parser.parseBOT(selection.getAbsolutePath());
+	displayInstructions(instructionSet);
 }
 
 boolean checkSelectionMade(File selection){
