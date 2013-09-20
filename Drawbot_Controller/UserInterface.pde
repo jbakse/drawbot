@@ -25,26 +25,89 @@ class User_Interface
         cp5.setColorForeground(color(200, 70, 0));
 
 
-        cp5.addSlider(settings, "desiredSpeed", "desiredSpeed", 25.0, 200.0, settings.desiredSpeed, (int)controlRect.x, (int)controlRect.y + 100, 100, 17)
-        // .setPosition(controlRect.x, controlRect.y + 100)
-        // .setWidth((int)100)
-        // .setRange(25, 150)
-        // .setSliderMode(Slider.FLEXIBLE)
-        ;
+        Slider speed = cp5.addSlider(settings, "desiredSpeed", "desiredSpeed", 25.0, 200.0, settings.desiredSpeed, (int)controlRect.x, (int)controlRect.y + 100, 100, 17);
 
-        cp5.addSlider(settings, "penUpAngle", "penUpAngle", 50.0, 150.0, settings.penUpAngle, (int)controlRect.x, (int)controlRect.y + 120, 100, 17)
-        // .setPosition(controlRect.x, controlRect.y + 100)
-        // .setWidth((int)100)
-        // .setRange(25, 150)
-        // .setSliderMode(Slider.FLEXIBLE)
-        ;
+        Slider penUp = cp5.addSlider(settings, "penUpAngle", "penUpAngle", 50.0, 150.0, settings.penUpAngle, (int)controlRect.x, (int)controlRect.y + 120, 100, 17);
 
-        cp5.addSlider(settings, "penDownAngle", "penDownAngle", 50.0, 150.0, settings.penDownAngle, (int)controlRect.x, (int)controlRect.y + 140, 100, 17)
-        // .setPosition(controlRect.x, controlRect.y + 100)
-        // .setWidth((int)100)
-        // .setRange(25, 150)
-        // .setSliderMode(Slider.FLEXIBLE)
-        ;
+        Slider penDown = cp5.addSlider(settings, "penDownAngle", "penDownAngle", 50.0, 150.0, settings.penDownAngle, (int)controlRect.x, (int)controlRect.y + 140, 100, 17);
+
+
+
+
+
+        penUp.addCallback(new CallbackListener()
+        {
+            public void controlEvent(CallbackEvent theEvent)
+            {
+
+                if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
+                {
+                    botDriver.sendInstruction(new Instruction("pen", new int[] {settings.penUpAngle}));
+                }
+            }
+        });
+
+        penDown.addCallback(new CallbackListener()
+        {
+            public void controlEvent(CallbackEvent theEvent)
+            {
+
+                if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
+                {
+                    botDriver.sendInstruction(new Instruction("pen", new int[] {settings.penDownAngle}));
+                }
+            }
+        });
+
+
+
+        Button moveUp = cp5.addButton("moveUp").setPosition((int)controlRect.x, (int)controlRect.y + 180);
+        moveUp.addCallback(new CallbackListener()
+        {
+            public void controlEvent(CallbackEvent theEvent)
+            {
+                if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
+                {
+                    botDriver.sendInstruction(new Instruction("move", new int[] {0, -100}));
+                }
+            }
+        });
+
+        Button moveDown = cp5.addButton("moveDown").setPosition((int)controlRect.x, (int)controlRect.y + 200);
+        moveDown.addCallback(new CallbackListener()
+        {
+            public void controlEvent(CallbackEvent theEvent)
+            {
+                if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
+                {
+                    botDriver.sendInstruction(new Instruction("move", new int[] {0, 100}));
+                }
+            }
+        });
+
+        Button moveLeft = cp5.addButton("moveLeft").setPosition((int)controlRect.x, (int)controlRect.y + 220);
+        moveLeft.addCallback(new CallbackListener()
+        {
+            public void controlEvent(CallbackEvent theEvent)
+            {
+                if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
+                {
+                    botDriver.sendInstruction(new Instruction("move", new int[] {-100, 0}));
+                }
+            }
+        });
+
+        Button moveRight = cp5.addButton("moveRight").setPosition((int)controlRect.x, (int)controlRect.y + 240);
+        moveRight.addCallback(new CallbackListener()
+        {
+            public void controlEvent(CallbackEvent theEvent)
+            {
+                if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
+                {
+                    botDriver.sendInstruction(new Instruction("move", new int[] {100, 0}));
+                }
+            }
+        });
 
 
 

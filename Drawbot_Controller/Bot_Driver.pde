@@ -39,10 +39,14 @@ class Bot_Driver {
 	void sendNext(){
 		if (instructionSet == null) return;
 		if (currentInstruction >= instructionSet.instructions.size()) return;
-		println("telling arduino: "+((Instruction)instructionSet.instructions.get(currentInstruction)).toCommand());
-		arduinoSerial.write(((Instruction)instructionSet.instructions.get(currentInstruction)).toCommand());
+		sendInstruction((Instruction)instructionSet.instructions.get(currentInstruction));
 		currentInstruction++;
 		if (currentInstruction == instructionSet.instructions.size()) stop();
+	}
+
+	void sendInstruction(Instruction i){
+		println("telling arduino: "+i.toCommand());
+		arduinoSerial.write(i.toCommand());
 	}
 
 
