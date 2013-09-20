@@ -74,8 +74,10 @@ class Instruction {
 	String toString() {
 		String output = name + " (" + code + "): ";
 		for (int i = 0; i < params.length; i++){
-			output += params[i] + ", ";
+			output += params[i];
+			if (i < params.length - 1) output += ", ";
 		}
+		output += ";";
 		return output;
 	}
 
@@ -83,8 +85,10 @@ class Instruction {
 	String toCommand() {
 		String output =  code + ",";
 		for (int i = 0; i < params.length; i++){
-			output += params[i] + ",";
+			output += params[i];
+			if (i < params.length - 1) output += ",";
 		}
+		output += ";";
 		output += "\n";
 		return output;
 	}
