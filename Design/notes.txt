@@ -1,0 +1,27 @@
+Laser Holes
+=====
+
+M3 Pass Fit Hole
+-----
+Design Size: .125 in / 3.175 mm
+Measured Size: 3.15-33mm (small side) 3.3-3.5mm (large side)
+
+M3 bolt passes easily
+
+Design Size: 3mm
+Measured Size: ?
+
+Known to work.
+
+
+M3 Tap Hole
+-----
+Design Size: 2.9mm or 2.5 
+Caliper ?
+One worked, but which one?
+
+
+
+Standard Grid
+-----
+3mm holes on 8mm grid
