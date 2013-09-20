@@ -72,15 +72,14 @@ class Instruction {
 	}
 
 	String toString() {
-		String output = name + " (" + code + "): ";
+		String output = "" + code + ",";
 		for (int i = 0; i < params.length; i++){
 			output += params[i];
 			if (i < params.length - 1) output += ", ";
 		}
-		output += ";";
+		output += "; //"+name;
 		return output;
 	}
-
 
 	String toCommand() {
 		String output =  code + ",";

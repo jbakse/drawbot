@@ -31,7 +31,7 @@ void setup() {
 }
 
 void draw() {
-	
+
 	background(50);
 	fill(255);
 	userInterface.draw();
@@ -82,7 +82,7 @@ public void startBot(int theValue){
 void displayInstructions(Instruction_Set instructionSet){
 	instructionListBox.clear();
 	for (int i=0; i < instructionSet.instructions.size(); i++) {
-		ListBoxItem lbi = instructionListBox.addItem(((Instruction)instructionSet.instructions.get(i)).toCommand(), i);
+		ListBoxItem lbi = instructionListBox.addItem(((Instruction)instructionSet.instructions.get(i)).toString(), i);
 		// lbi.setColorBackground(0xffff0000);
 	}
 }
