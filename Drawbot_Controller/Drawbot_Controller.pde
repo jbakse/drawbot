@@ -12,83 +12,115 @@ Visualizer visualizer;
 Instruction_Set instructionSet;
 
 
-void setup() {
-	RG.init(this);
-	cp5 = new ControlP5(this);
-	
-	size(800, 600);
-	
-	//initialize components
-	settings = new Settings();
-	userInterface = new User_Interface();
-	botDriver = new Bot_Driver(this);
-	parser = new Parser();
-	visualizer = new Visualizer();
+void setup()
+{
+    RG.init(this);
+    cp5 = new ControlP5(this);
 
-	instructionSet = parser.parseSVG(dataPath("default.svg"));
-	displayInstructions(instructionSet);
+    size(800, 600);
+
+    //initialize components
+    settings = new Settings();
+    userInterface = new User_Interface();
+    botDriver = new Bot_Driver(this);
+    parser = new Parser();
+    visualizer = new Visualizer();
+
+    instructionSet = parser.parseSVG(dataPath("default.svg"));
+    instructionSet = accelerize(instructionSet);
+    displayInstructions(instructionSet);
 
 }
 
-void draw() {
+void draw()
+{
 
-	background(50);
-	fill(255);
-	userInterface.draw();
-	visualizer.draw(instructionSet, (int)(instructionSet.instructions.size() * timeSliderValue));
-	// botDriver.step();
+    background(50);
+    fill(255);
+    userInterface.draw();
+    visualizer.draw(instructionSet, (int)(instructionSet.instructions.size() * timeSliderValue));
+    // botDriver.step();
 }
 
 
 //////////////////////////////////////////////////////
 // Button Handlers
 
-public void openSVG(int theValue) {
-	selectInput("Select a file to process:", "svgSelection");
+public void openSVG(int theValue)
+{
+    selectInput("Select a file to process:", "svgSelection");
 }
 
-void svgSelection(File selection) {
-	if (!checkSelectionMade(selection)) return;
-	instructionSet = parser.parseSVG(selection.getAbsolutePath());
-	displayInstructions(instructionSet);
+void svgSelection(File selection)
+{
+    if (!checkSelectionMade(selection)) return;
+    instructionSet = parser.parseSVG(selection.getAbsolutePath());
+    instructionSet = accelerize(instructionSet);
+    displayInstructions(instructionSet);
 }
 
-public void openBOT(int theValue) {
-	selectInput("Select a file to load:", "botFileSelection");
+public void openBOT(int theValue)
+{
+    selectInput("Select a file to load:", "botFileSelection");
 }
 
-void botFileSelection(File selection) {
-	if (!checkSelectionMade(selection)) return;
-	instructionSet = parser.parseBOT(selection.getAbsolutePath());
-	displayInstructions(instructionSet);
+void botFileSelection(File selection)
+{
+    if (!checkSelectionMade(selection)) return;
+    instructionSet = parser.parseBOT(selection.getAbsolutePath());
+    displayInstructions(instructionSet);
 }
 
-boolean checkSelectionMade(File selection){
-	if (selection == null) {
-		println("File not Selected.");
-		return false;
-	} 
-	println("User Selected: " + selection.getAbsolutePath());
-	return true;
+boolean checkSelectionMade(File selection)
+{
+    if (selection == null)
+    {
+        println("File not Selected.");
+        return false;
+    }
+    println("User Selected: " + selection.getAbsolutePath());
+    return true;
 }
 
-public void startBot(int theValue){
-	botDriver.start();
+public void startBot(int theValue)
+{
+    botDriver.start();
 }
 
 /////////////////////////////////////////////////////
 
 
-void displayInstructions(Instruction_Set instructionSet){
-	instructionListBox.clear();
-	for (int i=0; i < instructionSet.instructions.size(); i++) {
-		ListBoxItem lbi = instructionListBox.addItem(((Instruction)instructionSet.instructions.get(i)).toString(), i);
-		// lbi.setColorBackground(0xffff0000);
-	}
+void displayInstructions(Instruction_Set instructionSet)
+{
+    instructionListBox.clear();
+    for (int i = 0; i < instructionSet.instructions.size(); i++)
+    {
+        ListBoxItem lbi = instructionListBox.addItem(((Instruction)instructionSet.instructions.get(i)).toString(), i);
+        // lbi.setColorBackground(0xffff0000);
+    }
 }
 
 
 
-void serialEvent(Serial port) {
-	botDriver.serialEvent(port);
+void serialEvent(Serial port)
+{
+    botDriver.serialEvent(port);
+}
+
+
+Instruction_Set accelerize(Instruction_Set _instructionSet)
+{
+    Instruction_Set _processedInstructions = new Instruction_Set();
+    for (Instruction i : _instructionSet.instructions)
+    {
+    	println("name: "+ i.name);
+        if (i.name.equals("move"))
+        {
+        }
+        else
+        {
+            _processedInstructions.instructions.add(i);
+        }
+    }
+    return _processedInstructions;
 }

@@ -1,8 +1,8 @@
 class Instruction_Set {
-	ArrayList instructions;
+	ArrayList<Instruction> instructions;
 
 	Instruction_Set() {
-		instructions = new ArrayList();
+		instructions = new ArrayList<Instruction>();
 	}
 	
 	void appendBot(String _bot) {
