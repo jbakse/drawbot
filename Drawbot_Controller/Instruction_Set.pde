@@ -26,8 +26,8 @@ class Instruction_Set {
 		instructions.add(new Instruction("pen", new int[]{settings.penDownAngle}));
 	}
 
-	void appendMove(int _x, int _y) {
-		instructions.add(new Instruction("move", new int[]{_x, _y}));
+	void appendMove(int _x, int _y, int _speed) {
+		instructions.add(new Instruction("move", new int[]{_x, _y, _speed}));
 	}
 
 	void appendSpeed(int _speed) {

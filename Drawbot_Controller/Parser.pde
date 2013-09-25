@@ -94,7 +94,7 @@ class Parser {
 					}
 					int x = (int)((pointPaths[i][j].x * settings.xStepsPerPoint) - posX);
 					int y = (int)((pointPaths[i][j].y * settings.yStepsPerPoint) - posY);
-					instructions.appendMove(x, y);
+					instructions.appendMove(x, y, settings.desiredSpeed);
 					posX += x;
 					posY += y;
 				}

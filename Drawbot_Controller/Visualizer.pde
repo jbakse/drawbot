@@ -18,6 +18,8 @@ class Visualizer {
 
 				if (instruction.name == "move") {
 					stroke(c);
+					stroke(instruction.params[2] * 2.5, 0, 0);
+					
 					line(pos.x / settings.xStepsPerPixel, pos.y / settings.yStepsPerPixel, 
 						 (pos.x + instruction.params[0]) / settings.xStepsPerPixel, (pos.y + instruction.params[1]) / settings.yStepsPerPixel);
 					stroke(255);

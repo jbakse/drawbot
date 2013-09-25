@@ -27,7 +27,9 @@ void setup()
     visualizer = new Visualizer();
 
     instructionSet = parser.parseSVG(dataPath("default.svg"));
+    instructionSet = segmentize(instructionSet);
     instructionSet = accelerize(instructionSet);
+
     displayInstructions(instructionSet);
 
 }
@@ -55,6 +57,7 @@ void svgSelection(File selection)
 {
     if (!checkSelectionMade(selection)) return;
     instructionSet = parser.parseSVG(selection.getAbsolutePath());
+    instructionSet = segmentize(instructionSet);
     instructionSet = accelerize(instructionSet);
     displayInstructions(instructionSet);
 }
@@ -108,19 +111,115 @@ void serialEvent(Serial port)
 }
 
 
-Instruction_Set accelerize(Instruction_Set _instructionSet)
+Instruction_Set segmentize(Instruction_Set _instructionSet)
 {
+    int SEGMENT_SIZE = 20;
     Instruction_Set _processedInstructions = new Instruction_Set();
     for (Instruction i : _instructionSet.instructions)
     {
-    	println("name: "+ i.name);
+        println("name: " + i.name);
         if (i.name.equals("move"))
         {
+            int x = i.params[0];
+            int y = i.params[1];
+            int speed = i.params[2];
+            float distance = sqrt(x * x + y * y);
+            if (distance > SEGMENT_SIZE)
+            {
+                int deltaX = (int)((x / distance) * SEGMENT_SIZE);
+                int deltaY = (int)((y / distance) * SEGMENT_SIZE);
+                int segments = (int)(distance / SEGMENT_SIZE);
+                //generate full segments
+                for (int segment = 0; segment < segments; segment++)
+                {
+                    _processedInstructions.instructions.add(new Instruction("move", new int[] {deltaX, deltaY, speed}));
+                }
+                //generate final, partial segment
+                _processedInstructions.instructions.add(new Instruction("move", new int[] {x - (deltaX * segments), y - (deltaY * segments), speed}));
+            }
+            else
+            {
+                _processedInstructions.instructions.add(i);
+            }
         }
         else
         {
             _processedInstructions.instructions.add(i);
         }
     }
+    return _processedInstructions;
+}
+
+Instruction_Set accelerize(Instruction_Set _instructionSet)
+{
+    Instruction_Set _processedInstructions = new Instruction_Set();
+    float lastSpeedX = 0;
+    float lastSpeedY = 0;
+    Instruction lastInstruction = null;
+    for (Instruction i : _instructionSet.instructions)
+    {
+        if (i.name.equals("move"))
+        {
+            int x = i.params[0];
+            int y = i.params[1];
+            float distance = sqrt(x * x + y * y);
+            float thisSpeedX = i.params[0] / distance;
+            float thisSpeedY = i.params[1] / distance;
+            if (abs(thisSpeedX - lastSpeedX) > .5 || abs(thisSpeedX - lastSpeedX) > .5)
+            {
+                i.params[2] = 10;
+                if (lastInstruction != null) {
+                    lastInstruction.params[2] = 10;
+                }
+            }
+            _processedInstructions.instructions.add(i);
+            lastSpeedX = thisSpeedX;
+            lastSpeedY = thisSpeedY;
+            lastInstruction = i;
+        }
+        else
+        {
+            _processedInstructions.instructions.add(i);
+        }
+    }
+
+    for (int pass = 0; pass < 10; pass ++)
+    {
+        int lastSpeed = 0;
+        for (int i = 0; i < _instructionSet.instructions.size(); i++)
+        {
+            Instruction current = _instructionSet.instructions.get(i);
+            if (current.name.equals("move"))
+            {
+                int thisSpeed = current.params[2];
+                int avg = (thisSpeed + lastSpeed) / 2;
+
+                if (avg < thisSpeed)
+                {
+                    current.params[2] = avg;
+                }
+                lastSpeed = thisSpeed;
+            }
+        }
+
+        lastSpeed = 0;
+        for (int i = _instructionSet.instructions.size() -1; i >= 0; i--)
+        {
+            Instruction current = _instructionSet.instructions.get(i);
+            if (current.name.equals("move"))
+            {
+                int thisSpeed = current.params[2];
+                int avg = (thisSpeed + lastSpeed) / 2;
+
+                if (avg < thisSpeed)
+                {
+                    current.params[2] = avg;
+                }
+                lastSpeed = thisSpeed;
+            }
+        }
+
+    }
+
     return _processedInstructions;
 }
