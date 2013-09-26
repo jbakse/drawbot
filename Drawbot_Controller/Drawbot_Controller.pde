@@ -26,7 +26,7 @@ void setup()
     parser = new Parser();
     visualizer = new Visualizer();
 
-    instructionSet = parser.parseSVG(dataPath("default.svg"));
+    instructionSet = parser.parseSVG(dataPath("square_test.svg"));
     instructionSet = segmentize(instructionSet);
     instructionSet = accelerize(instructionSet);
 
@@ -93,7 +93,7 @@ public void startBot(int theValue)
 /////////////////////////////////////////////////////
 
 
-void displayInstructions(Instruction_Set instructionSet)
+synchronized void displayInstructions(Instruction_Set instructionSet)
 {
     instructionListBox.clear();
     for (int i = 0; i < instructionSet.instructions.size(); i++)
@@ -117,7 +117,6 @@ Instruction_Set segmentize(Instruction_Set _instructionSet)
     Instruction_Set _processedInstructions = new Instruction_Set();
     for (Instruction i : _instructionSet.instructions)
     {
-        println("name: " + i.name);
         if (i.name.equals("move"))
         {
             int x = i.params[0];
@@ -163,12 +162,20 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
             int x = i.params[0];
             int y = i.params[1];
             float distance = sqrt(x * x + y * y);
-            float thisSpeedX = i.params[0] / distance;
-            float thisSpeedY = i.params[1] / distance;
-            if (abs(thisSpeedX - lastSpeedX) > .5 || abs(thisSpeedX - lastSpeedX) > .5)
+
+            float thisSpeedX = x / distance;
+            float thisSpeedY = y / distance;
+            if (distance < .0001)
+            {
+                thisSpeedX = 0;
+                thisSpeedY = 0;
+            }
+            println("speeds " + thisSpeedX + " " + thisSpeedY + " " + lastSpeedX + " " + lastSpeedY);
+            if (abs(thisSpeedX - lastSpeedX) > .5 || abs(thisSpeedY - lastSpeedY) > .5)
             {
                 i.params[2] = 10;
-                if (lastInstruction != null) {
+                if (lastInstruction != null)
+                {
                     lastInstruction.params[2] = 10;
                 }
             }
@@ -185,7 +192,7 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
 
     for (int pass = 0; pass < 10; pass ++)
     {
-        int lastSpeed = 0;
+        int lastSpeed = 10;
         for (int i = 0; i < _instructionSet.instructions.size(); i++)
         {
             Instruction current = _instructionSet.instructions.get(i);
@@ -202,8 +209,8 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
             }
         }
 
-        lastSpeed = 0;
-        for (int i = _instructionSet.instructions.size() -1; i >= 0; i--)
+        lastSpeed = 10;
+        for (int i = _instructionSet.instructions.size() - 1; i >= 0; i--)
         {
             Instruction current = _instructionSet.instructions.get(i);
             if (current.name.equals("move"))

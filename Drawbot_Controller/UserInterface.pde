@@ -25,7 +25,7 @@ class User_Interface
         cp5.setColorForeground(color(200, 70, 0));
 
 
-        Slider speed = cp5.addSlider(settings, "desiredSpeed", "desiredSpeed", 25.0, 200.0, settings.desiredSpeed, (int)controlRect.x, (int)controlRect.y + 100, 100, 17);
+        Slider speed = cp5.addSlider(settings, "desiredSpeed", "desiredSpeed", 10.0, 200.0, settings.desiredSpeed, (int)controlRect.x, (int)controlRect.y + 100, 100, 17);
 
         Slider penUp = cp5.addSlider(settings, "penUpAngle", "penUpAngle", 50.0, 150.0, settings.penUpAngle, (int)controlRect.x, (int)controlRect.y + 120, 100, 17);
 
@@ -156,7 +156,7 @@ class User_Interface
                           .setColorBackground(color(0, 100))
                           .setColorForeground(color(255, 100));
 
-        console = cp5.addConsole(consoleTextArea);
+        // console = cp5.addConsole(consoleTextArea);
 
 
 

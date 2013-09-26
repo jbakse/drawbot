@@ -46,12 +46,14 @@ void readSerial()
     {
       int x = Serial.parseInt();
       int y = Serial.parseInt();
+      int speed = Serial.parseInt();
+      setSpeed(speed);
       moveSteps(x, y);
     }
 
     else if(command == 3) //reset
     {
-      Serial.println("done");
+      // Serial.println("done");
     }
 
     else if(command==8) //speed
@@ -63,6 +65,7 @@ void readSerial()
     while (Serial.available() && Serial.read() != '\n') {
       //rest of bytes are garbage
     }
+    Serial.println("done");
 
   }
 }
@@ -71,13 +74,13 @@ void pen(int angle)
 {
   penServo.write(angle);
   delay(50);
-  Serial.println("done");
+  // Serial.println("done");
 }
 
 void setSpeed(int val)
 {
   mySpeed = constrain(val, 10, 1000);
-  Serial.println("done");
+  // Serial.println("done");
 }
 
 void moveSteps(long xSteps, long ySteps)
@@ -130,7 +133,7 @@ void moveSteps(long xSteps, long ySteps)
   //    yMotor.step(-ySteps, FORWARD, SINGLE);
   //  } 
   //  
-  Serial.println("done");
+  // Serial.println("done");
 }
 
 
