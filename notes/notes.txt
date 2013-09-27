@@ -6,3 +6,52 @@ Drawbot_Control
 	Bot Driver				Bot_Driver
 	Settings				Settings
 	Visualizer/Sim			Visualizer
+
+
+
+ACCELERATION TEST
+
+	USING square_test_short.svg WITHOUT ACCELL
+
+	Speed 10 No Accel
+	Quality: Very Good
+	Time: 2:00+ 
+
+	Speed 50 No Accel
+	Quality: Some Wobbles
+	Time:
+
+	Speed 100 No Accel
+	Quality: Prominent Wobbles
+	Time: 0:18
+
+
+
+
+	USING square_test_short.svg WITH ACCELL
+	
+	Speed 10 With Accel
+	Quality: Very Good
+	Time: 2:13
+
+	Speed 50 With Accel
+	Quality: Very Good
+	Time: 1:13
+
+	Speed 100 With Accel
+	Quality: Good, Issue apparant with pen up down
+	Time: 0:50
+
+	Speed 150 With Accel
+	Quality: Pen up/down issue stronger
+	Time: :45
+
+	Speed 200 With Accel
+	Quality: Pen up/down issue stronger
+	Time: :45
+
+	Updated Accel to 0 speed on pen up/down
+
+	Speed 150 With Accel
+	Quality: Looks Good, Can see ink density changes in accel.
+	Time: :56

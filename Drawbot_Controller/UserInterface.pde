@@ -68,7 +68,7 @@ class User_Interface
             {
                 if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
                 {
-                    botDriver.sendInstruction(new Instruction("move", new int[] {0, -100}));
+                    botDriver.sendInstruction(new Instruction("move", new int[] {0, -100, 100}));
                 }
             }
         });
@@ -80,7 +80,7 @@ class User_Interface
             {
                 if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
                 {
-                    botDriver.sendInstruction(new Instruction("move", new int[] {0, 100}));
+                    botDriver.sendInstruction(new Instruction("move", new int[] {0, 100, 100}));
                 }
             }
         });
@@ -92,7 +92,7 @@ class User_Interface
             {
                 if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
                 {
-                    botDriver.sendInstruction(new Instruction("move", new int[] {-100, 0}));
+                    botDriver.sendInstruction(new Instruction("move", new int[] {-100, 0, 100}));
                 }
             }
         });
@@ -104,7 +104,7 @@ class User_Interface
             {
                 if (theEvent.getAction() == ControlP5.ACTION_RELEASED)
                 {
-                    botDriver.sendInstruction(new Instruction("move", new int[] {100, 0}));
+                    botDriver.sendInstruction(new Instruction("move", new int[] {100, 0, 100}));
                 }
             }
         });

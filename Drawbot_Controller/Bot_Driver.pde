@@ -30,6 +30,7 @@ class Bot_Driver {
 		sendNext();
 		sendNext();
 		sendNext();
+		sendNext();
 	}
 
 	void stop(){

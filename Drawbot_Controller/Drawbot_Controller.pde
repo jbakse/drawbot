@@ -11,6 +11,8 @@ Parser parser;
 Visualizer visualizer;
 Instruction_Set instructionSet;
 
+int ACCEL_SLOW = 20;
+int ACCEL_PASSES = 5;
 
 void setup()
 {
@@ -157,6 +159,10 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
     Instruction lastInstruction = null;
     for (Instruction i : _instructionSet.instructions)
     {
+        if (i.name.equals("pen")) {
+            lastSpeedX = 0;
+            lastSpeedY = 0;
+        }
         if (i.name.equals("move"))
         {
             int x = i.params[0];
@@ -173,10 +179,10 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
             println("speeds " + thisSpeedX + " " + thisSpeedY + " " + lastSpeedX + " " + lastSpeedY);
             if (abs(thisSpeedX - lastSpeedX) > .5 || abs(thisSpeedY - lastSpeedY) > .5)
             {
-                i.params[2] = 10;
+                i.params[2] = ACCEL_SLOW;
                 if (lastInstruction != null)
                 {
-                    lastInstruction.params[2] = 10;
+                    lastInstruction.params[2] = ACCEL_SLOW;
                 }
             }
             _processedInstructions.instructions.add(i);
@@ -190,9 +196,9 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
         }
     }
 
-    for (int pass = 0; pass < 10; pass ++)
+    for (int pass = 0; pass < ACCEL_PASSES; pass ++)
     {
-        int lastSpeed = 10;
+        int lastSpeed = ACCEL_SLOW;
         for (int i = 0; i < _instructionSet.instructions.size(); i++)
         {
             Instruction current = _instructionSet.instructions.get(i);
@@ -209,7 +215,7 @@ Instruction_Set accelerize(Instruction_Set _instructionSet)
             }
         }
 
-        lastSpeed = 10;
+        lastSpeed = ACCEL_SLOW;
         for (int i = _instructionSet.instructions.size() - 1; i >= 0; i--)
         {
             Instruction current = _instructionSet.instructions.get(i);
