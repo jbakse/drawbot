@@ -1,0 +1,1367 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"shaft",
+				"shaft_radius"
+			],
+			[
+				"r",
+				"regex-replace"
+			],
+			[
+				"data-",
+				"data-processing-sources"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"sto",
+				"stop2"
+			],
+			[
+				"star",
+				"start2"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"mag",
+				"magicAngle"
+			],
+			[
+				"o",
+				"outsideDiameter"
+			],
+			[
+				"pres",
+				"pressureAngle"
+			],
+			[
+				"pitch",
+				"pitchDiameter"
+			],
+			[
+				"de",
+				"dedendum"
+			],
+			[
+				"pi",
+				"pitchDiameter"
+			],
+			[
+				"tes",
+				"testDistance"
+			],
+			[
+				"di",
+				"distance"
+			],
+			[
+				"un",
+				"unconnectedRemain"
+			],
+			[
+				"seg",
+				"segsCross"
+			],
+			[
+				"poin",
+				"pointCount"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"rec",
+				"received_messages"
+			],
+			[
+				"ncs_s",
+				"ncs_status_request"
+			],
+			[
+				"cons",
+				"construct"
+			],
+			[
+				"soc",
+				"sockets"
+			],
+			[
+				"_newM",
+				"_newMax"
+			],
+			[
+				"_new",
+				"_newMin"
+			],
+			[
+				"Collid",
+				"Collide_TakeDamage"
+			],
+			[
+				"damage",
+				"damagePoints"
+			],
+			[
+				"t",
+				"transform"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Design/bom.txt",
+			"settings":
+			{
+				"buffer_size": 1199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "notes/todo.md",
+			"settings":
+			{
+				"buffer_size": 1058,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Drawbot_Controller/Drawbot_Controller.pde",
+			"settings":
+			{
+				"buffer_size": 6523,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Processing/Processing.sublime-build",
+	"command_palette":
+	{
+		"height": 71.0,
+		"selected_items":
+		[
+			[
+				"grem",
+				"Zap Gremlins"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"c",
+				"Set Syntax: C++"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"redin",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reid",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"syn",
+				"Set Syntax: C"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"syntax c",
+				"Set Syntax: C++"
+			],
+			[
+				"min",
+				"Minify Javascript"
+			],
+			[
+				"mini",
+				"Minify Javascript"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"syncof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"synbas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"synmar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"num",
+				"Insert Numbers"
+			],
+			[
+				"ins",
+				"Insert Numbers"
+			],
+			[
+				"in",
+				"Insert Numbers"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"gitst",
+				"Git: Status"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"pick",
+				"Color picker"
+			],
+			[
+				"col",
+				"Color picker"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"gitstu",
+				"Git: Status"
+			],
+			[
+				"gi",
+				"Git: Status"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"gitstatus",
+				"Git: Status"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"dis",
+				"Package Control: Discover Packages"
+			],
+			[
+				"colo",
+				"Color picker"
+			],
+			[
+				"color",
+				"Color picker"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Gr",
+				"Grunt"
+			],
+			[
+				"grunt",
+				"Grunt"
+			],
+			[
+				"grun",
+				"Grunt"
+			],
+			[
+				"gr",
+				"Grunt"
+			],
+			[
+				"DIS",
+				"Package Control: Discover Packages"
+			],
+			[
+				"LIST",
+				"Package Control: List Packages"
+			],
+			[
+				"g",
+				"Grunt"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"di",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 242.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jbakse/Desktop/pudt1203f13_week4/MSung/MSung_week_3_white_rects_and_circles.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Spring 2013/Week 6/\n	*Exposition*",
+		"/Users/jbakse/Documents/projects/Printrbot/8020sled/customizable_shaft_coupling.scad",
+		"/Users/jbakse/Documents/projects/Printrbot/8020sled/8020sled.scad",
+		"/Users/jbakse/Documents/projects/Printrbot/8020sled/8020smallsled.scad",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/challenges/challenge_1/web-export/challenge_1.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/challenges/challenge_2/challenge_2.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/challenges/challenge_3/challenge_3.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/challenges/challenge_5/challenge_5.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/challenges/challenge_4/challenge_4.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/class_notes.md",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/test/test.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/ugly.html",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/how to ugly",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/processing-helper/processing-helper.html",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/processing-helper/processing-helper.js",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/ugly.js",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/p5toUgly/(function($p) {\n\n    function setup() {\n        $p.size(500, 200);\n    }\n    $p.setup = setup;\n\n    function draw() {\n        $p.background(255, 0, 0);\n        $p.fill(0);\n        $p.ellipse($p.width * .5, $p.height * .5, 100, 100);\n    }\n    $p.draw = draw;\n})",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/processingtojs/test/test.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/processingtojs/processing-1.4.1.js",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/processingtojs/p5toUgly.js",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/processingtojs/test.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/lecture_notes.md",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_04/challenges/challenge_1/challenge_1.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/processingtojs/tool.js",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Week_02/grades",
+		"/Users/jbakse/Documents/projects/drawbot/Design/notes.txt",
+		"/Users/jbakse/Desktop/Printrbot/JadaRing/JadaRing.scad",
+		"/Users/jbakse/Desktop/Printrbot/hockey/stick.scad",
+		"/Users/jbakse/Documents/projects/meteor_test/coffee_demo/coffee_demo.html",
+		"/Users/jbakse/Documents/projects/meteor_test/leaderboard/leaderboard.html",
+		"/Users/jbakse/Documents/projects/meteor_test/todos/client/todos.html",
+		"/Users/jbakse/Documents/projects/meteor_test/gradebook/gradebook.html",
+		"/Users/jbakse/Documents/projects/meteor_test/coffee_demo/coffee_demo.coffee",
+		"/Users/jbakse/Documents/projects/meteor_test/leaderboard/leaderboard.js",
+		"/Users/jbakse/Documents/projects/meteor_test/todos/client/todos.js",
+		"/Users/jbakse/Documents/projects/meteor_test/gradebook/gradebook.css",
+		"/Users/jbakse/Documents/projects/meteor_test/gradebook/gradebook.coffee",
+		"/Users/jbakse/Documents/projects/meteor_test/gradebook/gradebook.js",
+		"/Users/jbakse/Desktop/Printrbot/keiko_cake/keiko_cake.scad",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Arduino",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/Calendar",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/PUDT_1203_Bakse_S13.md",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Spring 2013/Calendar",
+		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Fall 2013/PUDT_1203_Bakse_S13.txt",
+		"/Users/jbakse/Desktop/Printrbot/bunny_kiss/theworks.scad",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/colophon.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/contact.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/look.less",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/biography.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/index.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/scripts/main.coffee",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/Gruntfile.js",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/contentbuilder.sublime-project",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/preview_2/index.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/preview_2/new_york/drawbot/index.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/puppet/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/two_brothers/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vines/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vkio/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/minneapolis/fell_the_window_out/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/minneapolis/recognition/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/globe/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/natural_media/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/wallpaper/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/diffa/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/multitouch_instrument/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/open_house_banner/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/tsfim/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/_story_2.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/one_a_day/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/page_2.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/components/infinite-scroll/test/index.html",
+		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/grid.less",
+		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Color Scheme - Default/Monokai.tmTheme",
+		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/.jshintrc",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/_layout.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/notes.txt",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/index.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/_page_layout.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/drawbot.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/sketches/background_1/background_1.pde",
+		"/Users/jbakse/Dropbox/Justin_BNS/init/Gruntfile.js",
+		"/Users/jbakse/.extra",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/page_3.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/page_4.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/page_5.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/page_4.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/page_3.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/production/notes",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/_demo_code.pde",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/main.less",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/sourcecode.less",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/_demo_code.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/demo_code.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/_layout.exp.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/type.less",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/components/processingjs/processing.js",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/sketches/background_1/index.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/experimental.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/bower.json",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/studio_mud/_story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/resume.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/contact.jade",
+		"/tmp/subl stdin tiyylJ.txt",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/new_york/drawbot/story.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/detroit/one_a_day/story.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/minneapolis/fell_the_window_out/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vkio/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/story_2.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/studio_mud/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/.gitignore",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/.git/COMMIT_EDITMSG",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/natural_media/story",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vines/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/natural_media/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/one_a_day/story.jade",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/.bowerrc",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/index.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/slide.less",
+		"/Users/jbakse/Dropbox/Justin_BNS/init/dist/index.html",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/node_modules/grunt-cropthumb/tasks/cropthumb.js",
+		"/Users/jbakse/Documents/projects/justinbaksecom/dev/package.json"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/jbakse/Documents/projects/justinbaksecom/content",
+			"<project>",
+			"/Users/jbakse/Dropbox/GameDev/jbakse/unity_shooter/Assets/Scripts/design components"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Week 2 Assignment",
+			"5, 5",
+			"8",
+			"10",
+			"\"",
+			"rod_height",
+			"sled",
+			"arm_radius",
+			"grip_radius",
+			"grip_depth",
+			"set_screw_radius",
+			"shaft_screw_radius",
+			"set_screw_radius",
+			"grip_set_screw_radius",
+			"set_screw_radius",
+			"screw_thread_bore_radius",
+			"cid2",
+			"sketch_cid3",
+			"cid2",
+			"cid1",
+			"-1",
+			"<",
+			"    ",
+			"*",
+			"\n\n\n\n\n\n\n",
+			"\n\n\n\n\n\n",
+			"\n\n\n\n",
+			"N00",
+			"</tr>",
+			"<tr>",
+			"mailto",
+			"<tr>",
+			"_id",
+			"assigm",
+			"_id",
+			"{",
+			"log",
+			"gradeLetter",
+			"students",
+			"last_name",
+			"play",
+			"_",
+			"    ",
+			"div",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"span",
+			"\"",
+			"1",
+			"meta",
+			"over",
+			"//",
+			"30",
+			"clear",
+			"screw_thread_bore_radius",
+			"bigGear",
+			"dir",
+			"trial",
+			"	 ",
+			" ",
+			"\"",
+			"clean",
+			"</div>",
+			"image(src",
+			"image(",
+			"copy",
+			"watch",
+			"copy",
+			"fix",
+			"clea",
+			"option",
+			" ",
+			"color",
+			"highligh",
+			"	",
+			"\"",
+			"copy",
+			"_page_layout",
+			"_layout_page",
+			"  ",
+			"100",
+			"0x",
+			"stop2",
+			"value",
+			"println",
+			"rev",
+			"min",
+			"uglify",
+			"'dist",
+			"$(\".portfolio\")",
+			".full",
+			"660",
+			"export",
+			"Processing",
+			"window",
+			"canvas",
+			"%",
+			"\"",
+			"i",
+			"i>",
+			"i",
+			"stress",
+			".story",
+			"extends /_layout",
+			".slide",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"clean",
+			"gowanus",
+			"story",
+			"story_2",
+			"dotted",
+			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n		\n\n",
+			"\n		\n\n		\n\n",
+			"\n		\n\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"img(src",
+			", ",
+			"."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Design/bom.txt",
+					"settings":
+					{
+						"buffer_size": 1199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1106,
+								1106
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "notes/todo.md",
+					"settings":
+					{
+						"buffer_size": 1058,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								253,
+								253
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Drawbot_Controller/Drawbot_Controller.pde",
+					"settings":
+					{
+						"buffer_size": 6523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 223.0
+	},
+	"output.git":
+	{
+		"height": 114.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"col",
+				"content/colophon.jade"
+			],
+			[
+				"conjad",
+				"content/contact.jade"
+			],
+			[
+				"less",
+				"dev/app/styles/look.less"
+			],
+			[
+				"grun",
+				"dev/Gruntfile.js"
+			],
+			[
+				"drawbothtml",
+				"dev/dist/preview_2/new_york/drawbot/index.html"
+			],
+			[
+				"story2",
+				"content/new_york/drawbot/_story_2.jade"
+			],
+			[
+				"main",
+				"dev/app/scripts/main.coffee"
+			],
+			[
+				"ind",
+				"content/index.jade"
+			],
+			[
+				"distind",
+				"dev/dist/preview_2/index.html"
+			],
+			[
+				"project",
+				"dev/contentbuilder.sublime-project"
+			],
+			[
+				"distindex.ht",
+				"dev/app/components/infinite-scroll/test/index.html"
+			],
+			[
+				"gru",
+				"dev/Gruntfile.js"
+			],
+			[
+				"lookl",
+				"dev/app/styles/look.less"
+			],
+			[
+				"lay",
+				"dev/app/_layout.jade"
+			],
+			[
+				"pagelay",
+				"dev/app/_page_layout.jade"
+			],
+			[
+				"mainco",
+				"dev/app/scripts/main.coffee"
+			],
+			[
+				"look",
+				"dev/app/styles/look.less"
+			],
+			[
+				"maincof",
+				"dev/app/scripts/main.coffee"
+			],
+			[
+				"gri",
+				"dev/app/styles/grid.less"
+			],
+			[
+				"grou",
+				"dev/app/sketches/background_1/background_1.pde"
+			],
+			[
+				"backpde",
+				"dev/app/sketches/background_1/background_1.pde"
+			],
+			[
+				"note",
+				"content/notes.txt"
+			],
+			[
+				"no",
+				"content/notes.txt"
+			],
+			[
+				"loo",
+				"dev/app/styles/look.less"
+			],
+			[
+				"grid",
+				"dev/app/styles/grid.less"
+			],
+			[
+				"mainle",
+				"dev/app/styles/main.less"
+			],
+			[
+				"index",
+				"content/index.jade"
+			],
+			[
+				"layou",
+				"dev/app/_layout.jade"
+			],
+			[
+				"conind",
+				"content/index.jade"
+			],
+			[
+				"story",
+				"content/new_york/drawbot/_story_2.jade"
+			],
+			[
+				"back",
+				"dev/app/sketches/background_1/background_1.pde"
+			],
+			[
+				"recjad",
+				"content/minneapolis/recognition/_story.jade"
+			],
+			[
+				"vinesja",
+				"content/detroit/vines/_story.jade"
+			],
+			[
+				"mudjad",
+				"content/tsfim/studio_mud/_story.jade"
+			],
+			[
+				"ins",
+				"content/tsfim/multitouch_instrument/_story.jade"
+			],
+			[
+				"open",
+				"content/tsfim/open_house_banner/_story.jade"
+			],
+			[
+				"drawbostor",
+				"content/new_york/drawbot/_story_2.jade"
+			],
+			[
+				"drawstory",
+				"content/new_york/drawbot/_story.jade"
+			],
+			[
+				"type",
+				"dev/app/styles/type.less"
+			],
+			[
+				"not",
+				"content/notes.txt"
+			],
+			[
+				"mail",
+				"dev/app/styles/main.less"
+			],
+			[
+				"typ",
+				"dev/app/styles/type.less"
+			],
+			[
+				"males",
+				"dev/app/styles/main.less"
+			],
+			[
+				"coff",
+				"dev/app/scripts/main.coffee"
+			],
+			[
+				"drawbot_",
+				"content/new_york/drawbot/_story.jade"
+			],
+			[
+				"globejad",
+				"content/new_york/globe/_story.jade"
+			],
+			[
+				"botstoryjad",
+				"content/detroit/two_brothers/_story.jade"
+			],
+			[
+				"botjade",
+				"content/new_york/drawbot/drawbot.jade"
+			],
+			[
+				"connote",
+				"content/notes.txt"
+			],
+			[
+				"mediajade",
+				"content/new_york/natural_media/_story.jade"
+			],
+			[
+				"felljade",
+				"content/minneapolis/fell_the_window_out/_story.jade"
+			],
+			[
+				"naturjade",
+				"content/new_york/natural_media/_story.jade"
+			],
+			[
+				"botstory",
+				"dev/dist/new_york/drawbot/story.html"
+			],
+			[
+				"draws",
+				"content/new_york/drawbot/_story.jade"
+			],
+			[
+				"sto",
+				"dev/dist/detroit/one_a_day/story.html"
+			],
+			[
+				"mainles",
+				"dev/app/styles/main.less"
+			],
+			[
+				"_l",
+				"dev/app/_layout.jade"
+			],
+			[
+				"mudstory",
+				"content/tsfim/studio_mud/story.jade"
+			],
+			[
+				"lau",
+				"server/launch.sh"
+			],
+			[
+				"dev",
+				"notes/dev_plan.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true
+}

@@ -1,10 +1,12 @@
 Serial arduinoSerial;
 
-class Bot_Driver {
+class Bot_Driver
+{
 	int currentInstruction;
 	boolean running = false;
-	
-	Bot_Driver(PApplet _applet) {
+
+	Bot_Driver(PApplet _applet)
+	{
 
 		arduinoSerial = new Serial(_applet, Serial.list()[0], 9600);
 
@@ -14,17 +16,19 @@ class Bot_Driver {
 	}
 
 
-		
-	void serialEvent(Serial port) {
+
+	void serialEvent(Serial port)
+	{
 		String inString = arduinoSerial.readStringUntil('\n');
 		inString = trim(inString);
-		println("Arduino Said: "+inString);
+		println("Arduino Said: " + inString);
 		if (inString.equals("done")) {
 			if (running) sendNext();
 		}
 	}
 
-	void start(){
+	void start()
+	{
 		currentInstruction = 0;
 		running = true;
 		sendNext();
@@ -33,11 +37,13 @@ class Bot_Driver {
 		sendNext();
 	}
 
-	void stop(){
+	void stop()
+	{
 		running = false;
 	}
 
-	void sendNext(){
+	void sendNext()
+	{
 		if (instructionSet == null) return;
 		if (currentInstruction >= instructionSet.instructions.size()) return;
 		sendInstruction((Instruction)instructionSet.instructions.get(currentInstruction));
@@ -45,8 +51,9 @@ class Bot_Driver {
 		if (currentInstruction == instructionSet.instructions.size()) stop();
 	}
 
-	void sendInstruction(Instruction i){
-		println("telling arduino: "+i.toCommand());
+	void sendInstruction(Instruction i)
+	{
+		println("telling arduino: " + i.toCommand());
 		arduinoSerial.write(i.toCommand());
 	}
 
