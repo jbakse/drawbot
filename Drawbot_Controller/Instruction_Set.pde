@@ -26,6 +26,11 @@ class Instruction_Set {
 		instructions.add(new Instruction("pen", new int[]{settings.penDownAngle}));
 	}
 
+	void appendHome() {
+		instructions.add(new Instruction("home"));
+	}
+
+
 	void appendMove(int _x, int _y, int _speed) {
 		instructions.add(new Instruction("move", new int[]{_x, _y, _speed}));
 	}
@@ -49,6 +54,9 @@ class Instruction {
 	int code;
 	int params[];
 	
+	Instruction(String _name) {
+		this(_name, new int[]{});
+	}
 	Instruction(String _name, int _params[]) {
 		name = _name;
 		if (_name.equals("pen")){
@@ -57,7 +65,7 @@ class Instruction {
 		else if (_name.equals("move")){
 			code = 2;
 		}
-		else if(_name.equals("reset")){
+		else if(_name.equals("home")){
 			code = 3;
 		}
 		else if(_name.equals("speed")){
