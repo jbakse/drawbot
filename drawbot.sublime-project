@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"AStyleFormatter":
+		{
+			"options_default":
+			{
+				"break-blocks": "",
+				"break-closing-brackets": true,
+				"indent": "tab",
+				"indent-spaces": 4,
+				"max-instatement-indent": 100,
+				"pad-oper": "default",
+				"style": "kr",
+				"unpad-paren": "default"
+			}
+		}
+	}
+}

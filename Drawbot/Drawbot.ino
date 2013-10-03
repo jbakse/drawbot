@@ -10,7 +10,7 @@ Servo penServo;
 
 //state
 int mySpeed;
-int stepType = INTERLEAVE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+int stepType = MICROSTEP; //SINGLE DOUBLE INTERLEAVE MICROSTEP
 
 void setup()
 {
