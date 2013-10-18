@@ -40,7 +40,7 @@ class Instruction_Set
 	void appendRelease() {
 		instructions.add(new Instruction("release"));
 	}
-git 
+
 	void appendMove(int _x, int _y, int _speed) {
 		instructions.add(new Instruction("move", new int[]{_x, _y, _speed}));
 	}
