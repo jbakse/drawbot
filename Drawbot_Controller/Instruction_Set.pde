@@ -30,6 +30,10 @@ class Instruction_Set {
 		instructions.add(new Instruction("home"));
 	}
 
+	void appendRelease() {
+		instructions.add(new Instruction("release"));
+	}
+
 
 	void appendMove(int _x, int _y, int _speed) {
 		instructions.add(new Instruction("move", new int[]{_x, _y, _speed}));
@@ -67,6 +71,9 @@ class Instruction {
 		}
 		else if(_name.equals("home")){
 			code = 3;
+		}
+		else if(_name.equals("release")){
+			code = 4;
 		}
 		else if(_name.equals("speed")){
 			code = 8;
