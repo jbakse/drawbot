@@ -5,7 +5,7 @@ TODO
 	.put 3DPrinted parts online
 	.clean up illustrator design file and cut files
 
-	.design file
+	.design file (illustrator plan)
 		.clean up
 
 	.laser cut files
@@ -22,14 +22,15 @@ TODO
 			.horizontal car power panel mount hole
 
 	.wiring
-		.limit switches
+		x.limit switches
 		.wire management
 
 .software
 	.auto format info
 	.gui
+		.allow config of board width/height
 		.show drawing board extents in preview
-		.allow scaling of preiview
+		.allow scaling of preview
 		.lay out gui better
 		.show draw progress bar
 		.accel min slider
@@ -41,12 +42,15 @@ TODO
 		.reset button
 
 	.slicer
+		.imporve acceleration solver
 		.make it draw at 1 inch : 1 inch scale
 		.allow scaling of drawing in GUI
 		.arange shapes (traveling salesman?)
 
 	.firmware
-		.implement reset
+		x.implement home xy
+		x.implement release motors
+		.steps block, so diag 45 is not faster than up then over. this impacts acceleration, and means that when drawing a mostly vertical diag, there are little stutters when it moves left right
 
 .documentation
 	.basic instructions and background info

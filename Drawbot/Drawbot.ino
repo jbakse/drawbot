@@ -68,7 +68,7 @@ void releaseMotors()
 
 
 //config
-int stepType = INTERLEAVE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+int stepType = DOUBLE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
 
 #include <Servo.h>
 
