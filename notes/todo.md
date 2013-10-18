@@ -51,6 +51,7 @@ TODO
 		x.implement home xy
 		x.implement release motors
 		.steps block, so diag 45 is not faster than up then over. this impacts acceleration, and means that when drawing a mostly vertical diag, there are little stutters when it moves left right
+		.use interleave steps, higher res
 
 .documentation
 	.basic instructions and background info
