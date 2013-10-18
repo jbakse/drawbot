@@ -13,6 +13,7 @@ TODO
 			.add end supports
 			.add additional supports
 		.main plate
+			.add pen holder
 			.add cable arm
 			.add pulley guard
 			.add bottom pulley/idler parts

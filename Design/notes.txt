@@ -16,12 +16,38 @@ Known to work.
 
 M3 Tap Hole
 -----
-Design Size: 2.9mm or 2.5 
-Caliper ?
-One worked, but which one?
+Design Size:  2.5mm
+Measured Size: ~2.6
+
+Taps well and holds M3 bolt securely.
+
+
+
+Design | Measured (95% power 3.5% speed cut, not quite enough)
+On the small side of the plastic holes are very close to perfect. On the larger side, they are about .1 mm to big.
+2.5 | 2.6 		//good for tapped M3 hole
+2.6 | 2.7
+2.7 | 2.85
+2.8 | 2.9
+2.9 | 3.0
+3.0 | 3.1
+3.1 | 
+3.2 | 
+4.0 | 
+5.0 | 
 
 
 
 Standard Grid
 -----
 3mm holes on 8mm grid
+
+
+Plastic Measurements
+=====
+
+Sold As: T&T Plastic Land Clear 1/8 Acrylic Sheet
+Real Size: ~1.07 in 2.7 mm
+
+Sold As: T&T Plastic Land Clear 1/8 Acrylic Sheet	
+Real Size: ~1.07 in 2.7 mm
