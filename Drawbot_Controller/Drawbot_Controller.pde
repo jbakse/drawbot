@@ -11,8 +11,8 @@ Parser parser;
 Visualizer visualizer;
 Instruction_Set instructionSet;
 
-int ACCEL_SLOW = 20;
-int ACCEL_PASSES = 5;
+int ACCEL_SLOW = 40;
+int ACCEL_PASSES = 2;
 
 void setup()
 {

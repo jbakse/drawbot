@@ -1,31 +1,106 @@
-#include <AccelStepper.h>
-#include <AFMotor.h>
+// // // // //  ADAFRUIT MOTOR SHIELD 1 // // // // //
+
+// #include <AccelStepper.h>
+// #include <AFMotor.h>
+// #include <Servo.h>
+
+// void stepX(int steps, int direction, int type)
+// {
+//  xMotor.step(steps, xDirection, stepType);
+// }
+// void stepY(int steps, int direction, int type)
+// {
+//  yMotor.step(steps, xDirection, stepType);
+// }
+// void setXSpeed(int speed)
+// {
+//  xMotor.setSpeed(speed);
+// }
+// void setYSpeed(int speed)
+// {
+//  yMotor.setSpeed(speed);
+// }
+
+// AF_Stepper xMotor(200, 2);
+// AF_Stepper yMotor(200, 1);
+
+
+//void releaseMotors()
+//{
+//  xMotor.release();
+//  yMotor.release();
+//}
+
+// // // // //  ADAFRUIT MOTOR SHIELD VERSION 2 // // // // //
+
+#include <Wire.h>
+#include <Adafruit_MotorShield.h>
+#include "utility/Adafruit_PWMServoDriver.h"
+
+// Create the motor shield object with the default I2C address
+Adafruit_MotorShield AFMS = Adafruit_MotorShield();
+
+Adafruit_StepperMotor *xMotor = AFMS.getStepper(200, 2);
+Adafruit_StepperMotor *yMotor = AFMS.getStepper(200, 1);
+
+void stepX(int steps, int d, int type)
+{
+  xMotor->step(steps, d, type);
+}
+void stepY(int steps, int d, int type)
+{
+  yMotor->step(steps, d, type);
+}
+void setXSpeed(int speed)
+{
+  xMotor->setSpeed(speed);
+}
+void setYSpeed(int speed)
+{
+  yMotor->setSpeed(speed);
+}
+
+void releaseMotors()
+{
+  xMotor->release();
+  yMotor->release();
+}
+
+
+//config
+int stepType = DOUBLE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+
 #include <Servo.h>
 
-
-//motors
-AF_Stepper xMotor(200, 2);
-AF_Stepper yMotor(200, 1);
 Servo penServo;
-
+int xStopPin = 12;
+int yStopPin = 11;
 //state
-int mySpeed;
-int stepType = INTERLEAVE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+
 
 void setup()
 {
   Serial.begin(9600);
+  AFMS.begin();   //motor shield 2
   penServo.attach(9);
+  pen(160);
+
+  pinMode(xStopPin, INPUT);           
+  digitalWrite(xStopPin, HIGH); //pull up
+  pinMode(yStopPin, INPUT);
+  digitalWrite(yStopPin, HIGH); //pull up
+
   Serial.println("wake");
-  mySpeed = 100;
+  //mySpeed = 100;
 }
 
 void loop()
 {
-
-
   readSerial();
 }
+
+
+
 
 void readSerial()
 {
@@ -34,19 +109,15 @@ void readSerial()
   //Serial stuff
 
 
-  while (Serial.available() > 0)
-  {
+  while (Serial.available() > 0) {
 
     int command  = Serial.parseInt();
 
-    if (command == 1) //pen
-    {
+    if (command == 1) { //pen
       int a = Serial.parseInt();
       pen(a);
     }
-
-    else if (command == 2) //move
-    {
+    else if (command == 2) { //move
       int x = Serial.parseInt();
       int y = Serial.parseInt();
       int speed = Serial.parseInt();
@@ -54,43 +125,63 @@ void readSerial()
       moveSteps(x, y);
     }
 
-    else if (command == 3) //reset
-    {
-      // Serial.println("done");
+    else if (command == 3) { //home
+      homeXY();
+      // while (digitalRead(xStopPin) == 0) {
+      // 	stepX(1, BACKWARD, stepType); 
+      // }
+      // todo: this
+    }
+    else if (command == 4) { //release
+      releaseMotors();
     }
 
-    else if (command == 8) //speed
-    {
+    else if (command == 8) { //speed
       int newSpeed = Serial.parseInt();
       setSpeed(newSpeed);
     }
 
-    while (Serial.available() && Serial.read() != '\n')
-    {
-      //rest of bytes are garbage
+    while (Serial.available() && Serial.read() != '\n') {
+      //rest of bytes are garbage. garbage!
     }
     Serial.println("done");
 
   }
 }
 
+
+void homeXY()
+{
+  setSpeed(200);
+  boolean up = true;
+  boolean left = true;
+  
+  while (up || left) {
+    if (up) stepY(1, FORWARD, stepType); // Y is wired backwards
+    if (left) stepX(1, BACKWARD, stepType); 
+    
+    if (digitalRead(yStopPin) == 0) up = false;
+    if (digitalRead(xStopPin) == 0) left = false; 
+  }
+
+}
+
 void pen(int angle)
 {
   penServo.write(angle);
   delay(25);
-  // Serial.println("done");
 }
 
-void setSpeed(int val)
+void setSpeed(int _speed)
 {
-  mySpeed = constrain(val, 10, 1000);
-  // Serial.println("done");
+  int speed = constrain(_speed, 10, 1000);
+  setXSpeed(speed);
+  setYSpeed(speed);
 }
 
 void moveSteps(long xSteps, long ySteps)
 {
-  xMotor.setSpeed(mySpeed);
-  yMotor.setSpeed(mySpeed);
+
 
   int xDirection = FORWARD;
   if (xSteps < 0) xDirection = BACKWARD;
@@ -102,76 +193,42 @@ void moveSteps(long xSteps, long ySteps)
   int xStepped = 0;
   int yStepped = 0;
 
-  if (xSteps != 0 && ySteps != 0)
-  {
+  if (xSteps != 0 && ySteps != 0) {
     float yDelta = abs(ySteps) / (float)abs(xSteps);
     float yAccumulator = 0;
-    for (int x = 0; x < abs(xSteps); x++)
-    {
-      xMotor.step(1, xDirection, stepType);
+    for (int x = 0; x < abs(xSteps); x++) {
+      stepX(1, xDirection, stepType);
       xStepped++;
       yAccumulator += yDelta;
-      while (yAccumulator > 1)
-      {
-        yMotor.step(1, yDirection, stepType);
+      while (yAccumulator > 1) {
+        stepY(1, yDirection, stepType);
         yStepped++;
         yAccumulator -= 1;
       }
     }
-    while (yStepped < abs(ySteps))
-    {
-      yMotor.step(1, yDirection, stepType);
-      yStepped++;
-    }
-
-
-  }
-  else if (xSteps == 0)
-  {
-    for (int y = 0; y < abs(ySteps); y++)
-    {
-      yMotor.step(1, yDirection, stepType);
+    while (yStepped < abs(ySteps)) {
+      stepY(1, yDirection, stepType);
       yStepped++;
     }
   }
-  else if (ySteps == 0)
-  {
-    for (int x = 0; x < abs(xSteps); x++)
-    {
-      xMotor.step(1, xDirection, stepType);
+  else if (xSteps == 0) {
+    for (int y = 0; y < abs(ySteps); y++) {
+      stepY(1, yDirection, stepType);
+      yStepped++;
+    }
+  }
+  else if (ySteps == 0) {
+    for (int x = 0; x < abs(xSteps); x++) {
+      stepX(1, xDirection, stepType);
       xStepped++;
     }
   }
 
-  if (abs(xSteps) != xStepped || abs(ySteps) != yStepped) {
-    Serial.println("WARNING WARNING WARNING WARNING WARNING");
-    Serial.print(xSteps);
-    Serial.print(",");
-    Serial.print(ySteps);
-    Serial.print(" ");
-    Serial.print(xStepped);
-    Serial.print(",");
-    Serial.println(yStepped);
-  }
-
-
-  //
-  //  if (xSteps > 0) {
-  //    xMotor.step(xSteps, FORWARD, SINGLE);
-  //  }else if(xSteps < 0) {
-  //    xMotor.step(-xSteps, BACKWARD, SINGLE);
-  //  }
-  //
-  //
-  //
-  //  if (ySteps > 0) {
-  //    yMotor.step(ySteps, BACKWARD, SINGLE);
-  //  }else if(ySteps < 0) {
-  //    yMotor.step(-ySteps, FORWARD, SINGLE);
-  //  }
-  //
-  // Serial.println("done");
 }
+
+
+
+
 
 
 
