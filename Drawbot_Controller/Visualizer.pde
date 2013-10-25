@@ -24,7 +24,7 @@ class Visualizer
 					noStroke();
 					fill(255, 255, 255, 50);
 					ellipseMode(RADIUS);
-					ellipse(pos.x / settings.xStepsPerPixel, pos.y / settings.yStepsPerPixel, 1, 1);
+					ellipse(pos.x / settings.xStepsPerPixel, pos.y / settings.yStepsPerPixel, 2, 2);
 
 
 					// stroke(c);

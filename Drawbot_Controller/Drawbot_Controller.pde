@@ -28,9 +28,9 @@ void setup()
 	parser = new Parser();
 	visualizer = new Visualizer();
 
-	instructionSet = parser.parseSVG(dataPath("square_test.svg"));
-	instructionSet = segmentize(instructionSet);
-	instructionSet = accelerize(instructionSet);
+	instructionSet = parser.parseSVG2(dataPath("accel_test.svg"));
+	// instructionSet = segmentize(instructionSet);
+	// instructionSet = accelerize(instructionSet);
 
 	displayInstructions(instructionSet);
 
@@ -58,9 +58,9 @@ public void openSVG(int theValue)
 void svgSelection(File selection)
 {
 	if (!checkSelectionMade(selection)) return;
-	instructionSet = parser.parseSVG(selection.getAbsolutePath());
-	instructionSet = segmentize(instructionSet);
-	instructionSet = accelerize(instructionSet);
+	instructionSet = parser.parseSVG2(selection.getAbsolutePath());
+	// instructionSet = segmentize(instructionSet);
+	// instructionSet = accelerize(instructionSet);
 	displayInstructions(instructionSet);
 }
 
