@@ -77,15 +77,44 @@ class Parser
 
 
 		//accelerize plan
-		plan = accelerize(plan);
+		//plan = accelerize(plan);
 
+
+		//gcode plan
+		float cmScale = .3527;
+
+
+		PrintWriter output = createWriter("output.gcode");
+		output.println("G1 F1000");
+		output.println("G1 Z2.0");
+
+		boolean penDown = false;
+		for (int i = 0; i < plan.steps.size(); i++) {
+			Step step = plan.steps.get(i);
+			if (penDown && !step.penDown) {
+				output.println("G1 F100");
+				output.println("G1 Z2.0");
+				output.println("G1 F1000");
+				penDown = false;
+			}
+			if (!penDown && step.penDown) {
+				output.println("G1 F100");
+				output.println("G1 Z0.0");
+				output.println("G1 F1000");
+				penDown = true;
+			}
+			output.println("G1 X" + step.x * cmScale + " Y" + step.y * cmScale);
+
+		}
+		output.flush();
+  		output.close();
 
 
 		//generate instructions
 		Instruction_Set instructions = new Instruction_Set();
 		float posX = 0;
 		float posY = 0;
-		boolean penDown = false;
+		penDown = false;
 		for (int i = 0; i < plan.steps.size(); i++) {
 			Step step = plan.steps.get(i);
 			if (penDown && !step.penDown) {
