@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"segment",
+				"segmentedPlan"
+			],
+			[
+				"in",
+				"instructions"
+			],
+			[
+				"de",
+				"desiredSpeed"
+			],
+			[
 				"shaft",
 				"shaft_radius"
 			],
@@ -50,10 +62,6 @@
 			[
 				"pitch",
 				"pitchDiameter"
-			],
-			[
-				"de",
-				"dedendum"
 			],
 			[
 				"pi",
@@ -123,81 +131,24 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Drawbot_Controller/Drawbot_Controller.pde",
-			"settings":
-			{
-				"buffer_size": 5410,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/test.sublime-build",
-			"settings":
-			{
-				"buffer_size": 19,
-				"line_ending": "Unix",
-				"name": "untitled.sublime-build"
-			}
-		},
-		{
-			"file": "/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Processing/Processing.sublime-build",
-			"settings":
-			{
-				"buffer_size": 1681,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Drawbot_Controller/Instruction_Set.pde",
-			"settings":
-			{
-				"buffer_size": 2024,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Drawbot_Controller/Parser.pde",
-			"settings":
-			{
-				"buffer_size": 2652,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Processing/Processing.sublime-build",
 	"command_palette":
 	{
-		"height": 313.0,
+		"height": 111.0,
 		"selected_items":
 		[
-			[
-				"pracka",
-				"Package Control: List Packages"
-			],
-			[
-				"list pa",
-				"Package Control: List Packages"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"brows",
-				"Preferences: Browse Packages"
-			],
 			[
 				"asy",
 				"SublimeAStyleFormatter: Format Current File"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
 			],
 			[
 				"grem",
@@ -292,24 +243,24 @@
 				"Insert Numbers"
 			],
 			[
+				"ins",
+				"Insert Numbers"
+			],
+			[
 				"in",
 				"Insert Numbers"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"disc",
 				"Package Control: Discover Packages"
 			],
 			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
 				"gitst",
 				"Git: Status"
-			],
-			[
-				"pack",
-				"Package Control: List Packages"
 			],
 			[
 				"pick",
@@ -416,15 +367,23 @@
 				"Package Control: Remove Package"
 			],
 			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
 				"di",
 				"Package Control: Discover Packages"
 			]
 		],
-		"width": 462.0
+		"width": 476.0
 	},
 	"console":
 	{
-		"height": 242.0
+		"height": 411.0
 	},
 	"distraction_free":
 	{
@@ -437,20 +396,21 @@
 	},
 	"file_history":
 	[
-		"/Users/jbakse/Documents/projects/drawbot/notes/todo.md",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Drawbot_Controller.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Bot_Driver.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Instruction_Set.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Parser.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Settings.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/sketch.properties",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/UserInterface.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Util.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Visualizer.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Design/bom.txt",
-		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/jbakse/Documents/projects/drawbot/drawbot.sublime-project",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/notes.txt",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/UserInterface.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/.gitignore",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Bot_Driver.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Util.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Visualizer.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Drawbot_Controller.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/drawbot.sublime-project",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Settings.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Plan.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Parser.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Instruction_Set.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/todo.md",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Design/bom.txt",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/	at Drawbot_Controller$Parser.parseSVG2(Drawbot_Controller.java",
 		"/Users/jbakse/Desktop/pudt1203f13_week4/MSung/MSung_week_3_white_rects_and_circles.pde",
 		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Spring 2013/Week 6/\n	*Exposition*",
 		"/Users/jbakse/Documents/projects/Printrbot/8020sled/customizable_shaft_coupling.scad",
@@ -529,6 +489,7 @@
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/grid.less",
 		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Color Scheme - Default/Monokai.tmTheme",
+		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/.jshintrc",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/_layout.jade",
 		"/Users/jbakse/Documents/projects/justinbaksecom/content/notes.txt",
@@ -562,9 +523,7 @@
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/new_york/drawbot/story.html",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/detroit/one_a_day/story.html",
 		"/Users/jbakse/Documents/projects/justinbaksecom/content/minneapolis/fell_the_window_out/story.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vkio/story.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/story.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/new_york/drawbot/story_2.jade"
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vkio/story.jade"
 	],
 	"find":
 	{
@@ -585,6 +544,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lastSpeed",
+			"parseSVG2",
+			"_plan",
+			"threshold",
+			"parseSVG",
+			"parseSVG2",
+			"parseSVG",
+			"checkPath",
+			"si",
+			"penDown",
+			"posX",
+			"i",
+			"seg",
+			"i",
+			"penDown",
+			"X",
+			"_x",
+			"_y",
+			"_x",
+			"Instruction_Set",
+			"ACCEL_PASSES",
+			"acce",
+			"Instruction_Set",
 			"Week 2 Assignment",
 			"5, 5",
 			"8",
@@ -689,30 +671,7 @@
 			"i",
 			"i>",
 			"i",
-			"stress",
-			".story",
-			"extends /_layout",
-			".slide",
-			"      ",
-			"     ",
-			"    ",
-			"   ",
-			"  ",
-			"clean",
-			"gowanus",
-			"story",
-			"story_2",
-			"dotted",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n",
-			"\n		\n\n"
+			"stress"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -733,589 +692,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Drawbot_Controller/Drawbot_Controller.pde",
-					"settings":
-					{
-						"buffer_size": 5410,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								927,
-								927
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 556.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/test.sublime-build",
-					"settings":
-					{
-						"buffer_size": 19,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14,
-								14
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Processing/Processing.sublime-build",
-					"settings":
-					{
-						"buffer_size": 1681,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								228,
-								228
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Drawbot_Controller/Instruction_Set.pde",
-					"settings":
-					{
-						"buffer_size": 2024,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 655.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Drawbot_Controller/Parser.pde",
-					"settings":
-					{
-						"buffer_size": 2652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 786.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1352,7 +730,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 405.0
+		"height": 281.0
 	},
 	"output.git":
 	{

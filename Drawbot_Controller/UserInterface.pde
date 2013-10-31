@@ -40,7 +40,6 @@ class User_Interface
         });
 
 
-
         Slider penDown = cp5.addSlider(settings, "penDownAngle", "penDownAngle", 50.0, 200.0, settings.penDownAngle, (int)controlRect.x, (int)controlRect.y + 140, 100, 17);
         penDown.addCallback(new CallbackListener()
         {
@@ -150,6 +149,16 @@ class User_Interface
 
         cp5.addButton("startBot")
         .setPosition(controlRect.x + 220, controlRect.y + 40)
+        .setSize(100, 20)
+        ;
+
+        cp5.addButton("pauseBot")
+        .setPosition(controlRect.x + 220, controlRect.y + 80)
+        .setSize(100, 20)
+        ;
+
+        cp5.addButton("resumeBot")
+        .setPosition(controlRect.x + 220, controlRect.y + 120)
         .setSize(100, 20)
         ;
 

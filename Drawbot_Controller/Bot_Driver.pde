@@ -37,6 +37,18 @@ class Bot_Driver
 		sendNext();
 	}
 
+	void pause() {
+		running = false;
+	}
+
+	void resume() {
+		running = true;
+		sendNext();
+		sendNext();
+		sendNext();
+		sendNext();
+	}
+
 	void stop()
 	{
 		running = false;

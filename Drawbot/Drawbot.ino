@@ -68,7 +68,7 @@ void releaseMotors()
 
 
 //config
-int stepType = DOUBLE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+int stepType = SINGLE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
 
 #include <Servo.h>
 
@@ -155,11 +155,11 @@ void homeXY()
   setSpeed(200);
   boolean up = true;
   boolean left = true;
-  
+
   while (up || left) {
     if (up) stepY(1, FORWARD, stepType); // Y is wired backwards
     if (left) stepX(1, BACKWARD, stepType); 
-    
+
     if (digitalRead(yStopPin) == 0) up = false;
     if (digitalRead(xStopPin) == 0) left = false; 
   }
@@ -172,16 +172,27 @@ void pen(int angle)
   delay(25);
 }
 
+int maxSpeed;
+
 void setSpeed(int _speed)
 {
-  int speed = constrain(_speed, 10, 1000);
-  setXSpeed(speed);
-  setYSpeed(speed);
+  maxSpeed = constrain(_speed, 10, 1000);
+  setXSpeed(maxSpeed);
+  setYSpeed(maxSpeed);
 }
 
 void moveSteps(long xSteps, long ySteps)
 {
 
+  boolean oneStepX = false;
+  boolean oneStepY = false;
+  if (abs(xSteps) > abs(ySteps)) {
+    oneStepY = true;
+  }
+  else{
+    oneStepX = true;
+
+  }
 
   int xDirection = FORWARD;
   if (xSteps < 0) xDirection = BACKWARD;
@@ -197,34 +208,54 @@ void moveSteps(long xSteps, long ySteps)
     float yDelta = abs(ySteps) / (float)abs(xSteps);
     float yAccumulator = 0;
     for (int x = 0; x < abs(xSteps); x++) {
-      stepX(1, xDirection, stepType);
+
+      if (oneStepX) {
+        xMotor->onestep(xDirection, stepType);
+      } 
+      else {
+        stepX(1, xDirection, stepType);
+      }
+
       xStepped++;
       yAccumulator += yDelta;
       while (yAccumulator > 1) {
-        stepY(1, yDirection, stepType);
+        if (oneStepY){
+          yMotor->onestep(yDirection, stepType);
+        }
+        else{
+          stepY(1, yDirection, stepType);
+        }
         yStepped++;
         yAccumulator -= 1;
       }
     }
     while (yStepped < abs(ySteps)) {
-      stepY(1, yDirection, stepType);
+      if (oneStepY){
+        yMotor->onestep(yDirection, stepType);
+      }
+      else{
+        stepY(1, yDirection, stepType);
+      }      
       yStepped++;
     }
   }
   else if (xSteps == 0) {
     for (int y = 0; y < abs(ySteps); y++) {
       stepY(1, yDirection, stepType);
+      //yMotor->onestep(yDirection, stepType);
       yStepped++;
     }
   }
   else if (ySteps == 0) {
     for (int x = 0; x < abs(xSteps); x++) {
       stepX(1, xDirection, stepType);
+      //xMotor->onestep(xDirection, stepType);
       xStepped++;
     }
   }
 
 }
+
 
 
 

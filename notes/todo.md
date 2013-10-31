@@ -20,6 +20,8 @@ TODO
 			.reduce to two horizontal bar clips
 			.bearing holes on vertical car.
 			.horizontal car power panel mount hole
+			.vertical bar "foot"
+			.strength "castle" legs
 
 	.wiring
 		x.limit switches

@@ -1,16 +1,21 @@
 class Settings
 {
-	public float drawScale = 9.7656;
+	// public float drawScale = 9.7656;
 	// 3,906 steps across board / 400 pixels in preview
-	public int penUpAngle = 150;
-	public int penDownAngle = 140;
+	public int penUpAngle = 130;
+	public int penDownAngle = 116;
 	public int desiredSpeed = 100;
 	public int accelMinSpeed = 20;
 	public int accelPasses = 3;
-	public float xStepsPerPoint = 2.77 * 2;// 200/72;
-	public float yStepsPerPoint = 2.77 * 2 * 1.05;
-	public float xStepsPerPixel = 3;
-	public float yStepsPerPixel = 3;
+	public float xStepsPerPoint = 1 * (10/7.218);
+	public float yStepsPerPoint = 1 * (10/6.875);
+	public float xStepsPerPixel = 20;
+	public float yStepsPerPixel = 20;
+
+	public float canvasWidthPoints = 60 * 72;
+	public float canvasHeightPoints = 25 * 72;
+
+
 	Settings()
 	{
 

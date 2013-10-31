@@ -3,8 +3,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1728px" height="1296px" viewBox="0 0 1728 1296" enable-background="new 0 0 1728 1296" xml:space="preserve">
-<rect x="6.5" y="6.5" fill="none" stroke="#231F20" width="72" height="72"/>
-<circle fill="none" stroke="#231F20" cx="121" cy="42.5" r="36"/>
-<path fill="none" stroke="#231F20" d="M181,79c-9.941,0-18-8.059-18-18s8.059-18,18-18c-6.627,0-12-5.373-12-12s5.373-12,12-12
-	c-3.313,0-6-2.687-6-6s2.687-6,6-6"/>
+<rect x="6.5" y="6.5" fill="none" stroke="#231F20" width="283.049" height="283.048"/>
+<circle fill="none" stroke="#231F20" cx="456.626" cy="148.024" r="141.524"/>
+<path fill="none" stroke="#231F20" d="M692.5,291.514c-39.08,0-70.762-31.682-70.762-70.762S653.42,149.99,692.5,149.99
+	c-26.052,0-47.175-21.123-47.175-47.175S666.448,55.64,692.5,55.64c-13.024,0-23.587-10.563-23.587-23.587
+	S679.476,8.465,692.5,8.465"/>
 </svg>
