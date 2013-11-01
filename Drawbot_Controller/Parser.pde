@@ -165,6 +165,7 @@ class Parser
 
         boolean penDown = false;
 
+
         Instruction_Set instructions = new Instruction_Set();
         instructions.appendSpeed(settings.desiredSpeed);
 

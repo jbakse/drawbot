@@ -396,17 +396,17 @@
 	},
 	"file_history":
 	[
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/notes.txt",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/UserInterface.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/.gitignore",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Bot_Driver.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Util.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Visualizer.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Bot_Driver.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/UserInterface.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Drawbot_Controller.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/drawbot.sublime-project",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Settings.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Plan.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Parser.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Settings.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/notes.txt",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/.gitignore",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Util.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/drawbot.sublime-project",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Plan.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Instruction_Set.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/todo.md",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Design/bom.txt",
@@ -534,6 +534,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller",
 			"/Users/jbakse/Documents/projects/justinbaksecom/content",
 			"<project>",
 			"/Users/jbakse/Dropbox/GameDev/jbakse/unity_shooter/Assets/Scripts/design components"
@@ -544,6 +545,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"accelerize",
+			"startBot",
+			"parser",
+			"stroke",
+			"RG",
+			"parse",
+			"visual",
+			"drawScale",
 			"lastSpeed",
 			"parseSVG2",
 			"_plan",
@@ -663,15 +672,7 @@
 			".full",
 			"660",
 			"export",
-			"Processing",
-			"window",
-			"canvas",
-			"%",
-			"\"",
-			"i",
-			"i>",
-			"i",
-			"stress"
+			"Processing"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -746,6 +747,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"bot",
+				"Drawbot_Controller/Bot_Driver.pde"
+			],
+			[
+				"par",
+				"Drawbot_Controller/Parser.pde"
+			],
 			[
 				"col",
 				"content/colophon.jade"
