@@ -50,12 +50,12 @@ void draw()
 //////////////////////////////////////////////////////
 // Button Handlers
 
-public void openSVG(int theValue)
+synchronized public void openSVG(int theValue)
 {
     selectInput("Select a file to process:", "svgSelection");
 }
 
-void svgSelection(File selection)
+synchronized void svgSelection(File selection)
 {
     if (!checkSelectionMade(selection)) return;
     instructionSet = parser.parseSVG2(selection.getAbsolutePath());
@@ -64,12 +64,12 @@ void svgSelection(File selection)
     displayInstructions(instructionSet);
 }
 
-public void openBOT(int theValue)
+synchronized public void openBOT(int theValue)
 {
     selectInput("Select a file to load:", "botFileSelection");
 }
 
-void botFileSelection(File selection)
+synchronized void botFileSelection(File selection)
 {
     if (!checkSelectionMade(selection)) return;
     instructionSet = parser.parseBOT(selection.getAbsolutePath());

@@ -131,13 +131,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Drawbot_Controller/Parser.pde",
+			"settings":
+			{
+				"buffer_size": 9324,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Processing/Processing.sublime-build",
 	"command_palette":
 	{
-		"height": 111.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Discover Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"asy",
 				"SublimeAStyleFormatter: Format Current File"
@@ -243,16 +263,8 @@
 				"Insert Numbers"
 			],
 			[
-				"ins",
-				"Insert Numbers"
-			],
-			[
 				"in",
 				"Insert Numbers"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"disc",
@@ -305,10 +317,6 @@
 			[
 				"stat",
 				"Git: Status"
-			],
-			[
-				"dis",
-				"Package Control: Discover Packages"
 			],
 			[
 				"colo",
@@ -396,12 +404,18 @@
 	},
 	"file_history":
 	[
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Visualizer.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Bot_Driver.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/UserInterface.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Drawbot_Controller.pde",
-		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Parser.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Settings.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Drawbot_Controller.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Bot_Driver.pde",
+		"/Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/utility/twi.h",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot/Drawbot.ino",
+		"/Users/jbakse/Desktop/test_shake/test_shake.ino",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Arduino Said",
+		"/Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/Wire.h",
+		"/Users/jbakse/Desktop/test_shake/test_shake.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Visualizer.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/UserInterface.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Parser.pde",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/notes.txt",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/.gitignore",
 		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Util.pde",
@@ -517,13 +531,7 @@
 		"/Users/jbakse/Documents/projects/justinbaksecom/content/experimental.jade",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/bower.json",
 		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/studio_mud/_story.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/resume.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/contact.jade",
-		"/tmp/subl stdin tiyylJ.txt",
-		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/new_york/drawbot/story.html",
-		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/detroit/one_a_day/story.html",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/minneapolis/fell_the_window_out/story.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/detroit/vkio/story.jade"
+		"/Users/jbakse/Documents/projects/justinbaksecom/resume.jade"
 	],
 	"find":
 	{
@@ -545,6 +553,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"synchronized",
+			"speed",
+			"FORWARD",
+			"forwar",
 			"accelerize",
 			"startBot",
 			"parser",
@@ -668,11 +680,7 @@
 			"min",
 			"uglify",
 			"'dist",
-			"$(\".portfolio\")",
-			".full",
-			"660",
-			"export",
-			"Processing"
+			"$(\".portfolio\")"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -693,8 +701,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Drawbot_Controller/Parser.pde",
+					"settings":
+					{
+						"buffer_size": 9324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1354,
+								1354
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 931.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -736,6 +773,10 @@
 	"output.git":
 	{
 		"height": 114.0
+	},
+	"output.test_shake":
+	{
+		"height": 124.0
 	},
 	"replace":
 	{

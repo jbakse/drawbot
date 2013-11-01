@@ -31,10 +31,17 @@ class Bot_Driver
 	{
 		currentInstruction = 0;
 		running = true;
+		
 		sendNext();
 		sendNext();
 		sendNext();
 		sendNext();
+		
+		sendNext();
+		sendNext();
+		sendNext();
+		sendNext();
+
 	}
 
 	void pause() {

@@ -7,7 +7,7 @@ class Parser
     {
         segments = new ArrayList();
     }
-    Instruction_Set parseBOT(String file)
+    synchronized Instruction_Set parseBOT(String file)
     {
         // return new Instruction_Set();
 
@@ -36,7 +36,7 @@ class Parser
 
     }
 
-    Instruction_Set parseSVG2(String file)
+    synchronized Instruction_Set parseSVG2(String file)
     {
         println("parseSVG2: " + file);
 

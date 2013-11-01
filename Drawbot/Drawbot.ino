@@ -123,6 +123,9 @@ void readSerial()
       int speed = Serial.parseInt();
       setSpeed(speed);
       moveSteps(x, y);
+      //Serial.println(micros());
+      //myStepXY(x, y, speed, stepType);
+      //Serial.println(micros());
     }
 
     else if (command == 3) { //home
@@ -257,6 +260,86 @@ void moveSteps(long xSteps, long ySteps)
 }
 
 
+
+
+void myStepXY(int stepsX, int stepsY, int rpm, int style){
+  int xDir = FORWARD;
+  if (stepsX < 0) xDir = BACKWARD;
+
+  int yDir = BACKWARD;
+  if (stepsY < 0) yDir = FORWARD;
+
+  stepsX = abs(stepsX);
+  stepsY = abs(stepsY);
+
+  float xRPM = 0;
+  float yRPM = 0;
+
+  if (stepsX > stepsY) {
+    xRPM = rpm;
+    yRPM = (rpm * stepsY) / (float)stepsX;
+  } 
+  else {
+    yRPM = rpm;
+    xRPM = (rpm * stepsX) / (float)stepsY;
+  }
+
+
+  unsigned long xMicrosPerStep = ((60*1000000)/xRPM)/200;
+  unsigned long yMicrosPerStep = ((60*1000000)/yRPM)/200;
+  if (stepsX == 0) {
+    xMicrosPerStep = 1000000 * 60 * 10; 
+  }
+
+  if (stepsY == 0) {
+    yMicrosPerStep = 1000000 * 60 * 10; 
+  }
+
+  Serial.print("MicrosPerStep: ");
+  Serial.print(xMicrosPerStep);
+  Serial.print(",");
+  Serial.print(yMicrosPerStep);
+
+  Serial.print(" Steps: ");
+  Serial.print(stepsX);
+  Serial.print(",");
+  Serial.print(stepsY);
+
+  Serial.print(" Total: ");
+  Serial.print(xMicrosPerStep * stepsX);
+  Serial.print(",");
+  Serial.println(yMicrosPerStep * stepsY);
+
+  int xStep = 0;
+  int yStep = 0;
+  unsigned long startTime = micros();
+  while(xStep < stepsX || yStep < stepsY) {
+    if (xStep < stepsX && micros() - startTime > (xStep + 1) * xMicrosPerStep) {
+      xMotor->onestep(xDir, style);
+      xStep++;
+    }
+    if (yStep < stepsY &&  micros() - startTime > (yStep + 1) * yMicrosPerStep) {
+      yMotor->onestep(yDir, style);
+      yStep++;
+    }
+  }
+  Serial.print(" Steps Taken: ");
+  Serial.print(xStep);
+  Serial.print(",");
+  Serial.println(yStep);
+  
+  //  
+  //  unsigned long waits = 0;
+  //  
+  //  unsigned long startTime = micros();
+  //  for (int i = 0; i < steps; i++) {
+  //    while(micros() - startTime < i * microsPerStep){
+  //      waits++;
+  //    }
+  //    yMotor->onestep(dir, style);
+  //  }
+  //Serial.println(waits);
+}
 
 
 
