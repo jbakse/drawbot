@@ -1,3 +1,7 @@
+4.5 Gear a little loose
+4.0 To tight to fit
+
+
 Drawbot_Control
 	Parse SVG				Parser
 	Parse BOT				Parser

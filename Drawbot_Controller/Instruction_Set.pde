@@ -5,6 +5,7 @@ class Instruction_Set
 	Instruction_Set()
 	{
 		instructions = new ArrayList<Instruction>();
+        
 	}
 
 	void appendBot(String _bot)

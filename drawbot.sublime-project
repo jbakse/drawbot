@@ -2,13 +2,15 @@
 	"folders":
 	[
 		{
-
-			"path": "."
+			"path": "/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git"
+		},
+		{
+			"path": "/Users/jbakse/Desktop/test_shake"
 		}
 	],
 	"settings":
 	{
-		"AStyleFormatter":
+		"AStyleFormatter!":
 		{
 			"options_default":
 			{
