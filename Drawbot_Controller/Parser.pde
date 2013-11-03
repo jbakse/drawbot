@@ -85,34 +85,64 @@ class Parser
         }
 
 
-            //gcode plan
-        // float cmScale = .3527;
+        //gcode plan
+        {
+        PrintWriter output = createWriter("output.gcode");
+   
+        float cmScale = .3527;
+
+        output.println("G92 X0 Y0 Z0 E0");
+        
+        output.println("G1 F200");
+        output.println("G1 Z2.0");
+        output.println("G1 F500");
+
+        boolean penDown = false;
+        float oldX = 0;
+        float oldY = 0;
+        float extrude = 0;
+
+        for (int i = 0; i < plan.steps.size(); i++) {
+            Step step = plan.steps.get(i);
+            if (penDown && !step.penDown) {
+                output.println("G1 F200");
+                output.println("G1 Z1.0");
+                output.println("G1 F500");
+                penDown = false;
+            }
+            if (!penDown && step.penDown) {
+                output.println("G1 F200");
+                output.println("G1 Z0");
+                output.println("G1 F500");
+                penDown = true;
+            }
+
+            float newX = step.x * cmScale;
+            float newY = step.y * cmScale;
+            float distanceCM = sqrt((newX - oldX) * (newX - oldX) + (newY - oldY) * (newY - oldY));
+            oldX = newX;
+            oldY = newY;
+            float extrudeScale = .08;
+
+            if (penDown) {
+            	extrude += distanceCM * extrudeScale;
+            	output.println("G1 X" + newX + " Y" + newY + " E"+extrude); //100.0 - 
+            }else{
+            	output.println("G1 X" + newX + " Y" + newY); //100.0 - 
+            }
+        }
 
 
-        // PrintWriter output = createWriter("output.gcode");
-        // output.println("G1 F1000");
-        // output.println("G1 Z2.0");
+    
 
-        // boolean penDown = false;
-        // for (int i = 0; i < plan.steps.size(); i++) {
-        //     Step step = plan.steps.get(i);
-        //     if (penDown && !step.penDown) {
-        //         output.println("G1 F100");
-        //         output.println("G1 Z2.0");
-        //         output.println("G1 F1000");
-        //         penDown = false;
-        //     }
-        //     if (!penDown && step.penDown) {
-        //         output.println("G1 F100");
-        //         output.println("G1 Z0.0");
-        //         output.println("G1 F1000");
-        //         penDown = true;
-        //     }
-        //     output.println("G1 X" + step.x * cmScale + " Y" + step.y * cmScale);
+    	output.println("G1 F200");
+        output.println("G1 Z2.0");
+        output.println("M84"); //release motors
 
-        // }
-        // output.flush();
-        // output.close();
+        output.flush();
+        output.close();
+		}
+
 
         //accelerize plan
         plan = accelerize(plan);
