@@ -7,10 +7,17 @@ class Bot_Driver
 
 	Bot_Driver(PApplet _applet)
 	{
+		try {
+			arduinoSerial = new Serial(_applet, Serial.list()[0], 9600);
+			arduinoSerial.bufferUntil('\n');
+		} catch (Exception e) {
+			println("Problem connecting to arduino");
+		} finally {
+			
+		}
+		
 
-		arduinoSerial = new Serial(_applet, Serial.list()[0], 9600);
-
-		arduinoSerial.bufferUntil('\n');
+		
 		currentInstruction = 0;
 		running = false;
 	}
