@@ -2,15 +2,12 @@
 	"folders":
 	[
 		{
-			"path": "/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git"
-		},
-		{
-			"path": "/Users/jbakse/Desktop/test_shake"
+			"path": "."
 		}
 	],
 	"settings":
 	{
-		"AStyleFormatter!":
+		"AStyleFormatter":
 		{
 			"options_default":
 			{
@@ -21,7 +18,8 @@
 				"max-instatement-indent": 100,
 				"pad-oper": "default",
 				"style": "kr",
-				"unpad-paren": "default"
+				"unpad-paren": "default",
+				"additional_options": []
 			}
 		}
 	}
