@@ -1,2 +1,3 @@
 *.sublime-workspace
 *.gcode
+output.bot

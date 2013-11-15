@@ -8,7 +8,7 @@ class Bot_Driver
 	Bot_Driver(PApplet _applet)
 	{
 		try {
-			arduinoSerial = new Serial(_applet, Serial.list()[0], 9600);
+			arduinoSerial = new Serial(_applet, Serial.list()[0], 115200);
 			arduinoSerial.bufferUntil('\n');
 		} catch (Exception e) {
 			println("Problem connecting to arduino");
@@ -44,10 +44,10 @@ class Bot_Driver
 		sendNext();
 		sendNext();
 		
-		sendNext();
-		sendNext();
-		sendNext();
-		sendNext();
+		// sendNext();
+		// sendNext();
+		// sendNext();
+		// sendNext();
 
 	}
 
@@ -79,7 +79,7 @@ class Bot_Driver
 
 	void sendInstruction(Instruction i)
 	{
-		println("telling arduino: " + i.toCommand());
+		print("telling arduino: " + i.toCommand());
 		arduinoSerial.write(i.toCommand());
 	}
 

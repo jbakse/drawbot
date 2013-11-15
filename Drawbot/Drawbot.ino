@@ -68,7 +68,7 @@ void releaseMotors()
 
 
 //config
-int stepType = SINGLE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+int stepType = INTERLEAVE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
 
 #include <Servo.h>
 
@@ -80,10 +80,10 @@ int yStopPin = 11;
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(115200);
   AFMS.begin();   //motor shield 2
   penServo.attach(9);
-  pen(160);
+  pen(60);
 
   pinMode(xStopPin, INPUT);           
   digitalWrite(xStopPin, HIGH); //pull up
@@ -98,7 +98,6 @@ void loop()
 {
   readSerial();
 }
-
 
 
 
@@ -124,7 +123,7 @@ void readSerial()
       setSpeed(speed);
       moveSteps(x, y);
       //Serial.println(micros());
-      //myStepXY(x, y, speed, stepType);
+      //myStepXY(x, y, speed, SINGLE);
       //Serial.println(micros());
     }
 
@@ -160,7 +159,7 @@ void homeXY()
   boolean left = true;
 
   while (up || left) {
-    if (up) stepY(1, FORWARD, stepType); // Y is wired backwards
+    if (up) stepY(1, BACKWARD, stepType); // Y is wired backwards
     if (left) stepX(1, BACKWARD, stepType); 
 
     if (digitalRead(yStopPin) == 0) up = false;
@@ -200,8 +199,8 @@ void moveSteps(long xSteps, long ySteps)
   int xDirection = FORWARD;
   if (xSteps < 0) xDirection = BACKWARD;
 
-  int yDirection = BACKWARD; //y is wired backwards
-  if (ySteps < 0) yDirection = FORWARD;
+  int yDirection = FORWARD; 
+  if (ySteps < 0) yDirection = BACKWARD;
 
 
   int xStepped = 0;
@@ -272,48 +271,63 @@ void myStepXY(int stepsX, int stepsY, int rpm, int style){
   stepsX = abs(stepsX);
   stepsY = abs(stepsY);
 
-  float xRPM = 0;
-  float yRPM = 0;
+  unsigned long xRPM = 0;
+  unsigned long yRPM = 0;
 
   if (stepsX > stepsY) {
     xRPM = rpm;
-    yRPM = (rpm * stepsY) / (float)stepsX;
+    yRPM = (rpm * (unsigned long)stepsY) / stepsX;
   } 
   else {
     yRPM = rpm;
-    xRPM = (rpm * stepsX) / (float)stepsY;
+    xRPM = (rpm * (unsigned long)stepsX) / stepsY;
   }
 
 
-  unsigned long xMicrosPerStep = ((60*1000000)/xRPM)/200;
-  unsigned long yMicrosPerStep = ((60*1000000)/yRPM)/200;
+  unsigned long xMicrosPerStep;
+  unsigned long yMicrosPerStep;
+
   if (stepsX == 0) {
     xMicrosPerStep = 1000000 * 60 * 10; 
+  }
+  else{
+    xMicrosPerStep = ((60*1000000)/xRPM)/200;
   }
 
   if (stepsY == 0) {
     yMicrosPerStep = 1000000 * 60 * 10; 
+  } 
+  else {
+    yMicrosPerStep = ((60*1000000)/yRPM)/200;
   }
 
-  Serial.print("MicrosPerStep: ");
-  Serial.print(xMicrosPerStep);
-  Serial.print(",");
-  Serial.print(yMicrosPerStep);
-
-  Serial.print(" Steps: ");
-  Serial.print(stepsX);
-  Serial.print(",");
-  Serial.print(stepsY);
-
-  Serial.print(" Total: ");
-  Serial.print(xMicrosPerStep * stepsX);
-  Serial.print(",");
-  Serial.println(yMicrosPerStep * stepsY);
+  //  Serial.print("RPM: ");
+  //  Serial.print(xRPM);
+  //  Serial.print(",");
+  //  Serial.print(yRPM);
+  //
+  //  Serial.print(" MicrosPerStep: ");
+  //  Serial.print(xMicrosPerStep);
+  //  Serial.print(",");
+  //  Serial.print(yMicrosPerStep);
+  //
+  //  Serial.print(" Steps: ");
+  //  Serial.print(stepsX);
+  //  Serial.print(",");
+  //  Serial.print(stepsY);
+  //
+  //  Serial.print(" Total: ");
+  //  Serial.print(xMicrosPerStep * stepsX);
+  //  Serial.print(",");
+  //  Serial.println(yMicrosPerStep * stepsY);
 
   int xStep = 0;
   int yStep = 0;
   unsigned long startTime = micros();
+
+
   while(xStep < stepsX || yStep < stepsY) {
+
     if (xStep < stepsX && micros() - startTime > (xStep + 1) * xMicrosPerStep) {
       xMotor->onestep(xDir, style);
       xStep++;
@@ -323,11 +337,13 @@ void myStepXY(int stepsX, int stepsY, int rpm, int style){
       yStep++;
     }
   }
-  Serial.print(" Steps Taken: ");
-  Serial.print(xStep);
-  Serial.print(",");
-  Serial.println(yStep);
-  
+  //  Serial.print(" Steps Taken: ");
+  //  Serial.print(xStep);
+  //  Serial.print(",");
+  //  Serial.println(yStep);
+
+
+
   //  
   //  unsigned long waits = 0;
   //  

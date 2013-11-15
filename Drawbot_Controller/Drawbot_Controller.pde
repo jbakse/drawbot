@@ -28,7 +28,7 @@ void setup()
     parser = new Parser();
     visualizer = new Visualizer();
 
-    instructionSet = parser.parseSVG2(dataPath("accel_test.svg"));
+    instructionSet = parser.parseSVG2(dataPath("circles.svg"));
     // instructionSet = segmentize(instructionSet);
     // instructionSet = accelerize(instructionSet);
 

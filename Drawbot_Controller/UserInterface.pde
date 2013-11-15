@@ -27,7 +27,7 @@ class User_Interface
 
         Slider speed = cp5.addSlider(settings, "desiredSpeed", "desiredSpeed", 10.0, 400.0, settings.desiredSpeed, (int)controlRect.x, (int)controlRect.y + 100, 100, 17);
 
-        Slider penUp = cp5.addSlider(settings, "penUpAngle", "penUpAngle", 50.0, 200.0, settings.penUpAngle, (int)controlRect.x, (int)controlRect.y + 120, 100, 17);
+        Slider penUp = cp5.addSlider(settings, "penUpAngle", "penUpAngle", 10.0, 200.0, settings.penUpAngle, (int)controlRect.x, (int)controlRect.y + 120, 100, 17);
         penUp.addCallback(new CallbackListener()
         {
             public void controlEvent(CallbackEvent theEvent)
@@ -40,7 +40,7 @@ class User_Interface
         });
 
 
-        Slider penDown = cp5.addSlider(settings, "penDownAngle", "penDownAngle", 50.0, 200.0, settings.penDownAngle, (int)controlRect.x, (int)controlRect.y + 140, 100, 17);
+        Slider penDown = cp5.addSlider(settings, "penDownAngle", "penDownAngle", 10.0, 200.0, settings.penDownAngle, (int)controlRect.x, (int)controlRect.y + 140, 100, 17);
         penDown.addCallback(new CallbackListener()
         {
             public void controlEvent(CallbackEvent theEvent)

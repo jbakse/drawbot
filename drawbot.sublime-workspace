@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"segment",
+				"segmentedPlan"
+			],
+			[
+				"in",
+				"instructions"
+			],
+			[
+				"de",
+				"desiredSpeed"
+			],
+			[
 				"shaft",
 				"shaft_radius"
 			],
@@ -50,10 +62,6 @@
 			[
 				"pitch",
 				"pitchDiameter"
-			],
-			[
-				"de",
-				"dedendum"
 			],
 			[
 				"pi",
@@ -123,40 +131,52 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Drawbot_Controller/Drawbot_Controller.pde",
+			"settings":
+			{
+				"buffer_size": 6715,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Drawbot_Controller/Settings.pde",
+			"settings":
+			{
+				"buffer_size": 550,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Processing/Processing.sublime-build",
 	"command_palette":
 	{
-		"height": 313.0,
+		"height": 171.0,
 		"selected_items":
 		[
 			[
-				"pracka",
-				"Package Control: List Packages"
+				"ins",
+				"Package Control: Install Package"
 			],
 			[
-				"list pa",
-				"Package Control: List Packages"
+				"dis",
+				"Package Control: Discover Packages"
 			],
 			[
 				"insta",
 				"Package Control: Install Package"
 			],
 			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"brows",
-				"Preferences: Browse Packages"
-			],
-			[
 				"asy",
 				"SublimeAStyleFormatter: Format Current File"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
 			],
 			[
 				"grem",
@@ -259,16 +279,8 @@
 				"Package Control: Discover Packages"
 			],
 			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
 				"gitst",
 				"Git: Status"
-			],
-			[
-				"pack",
-				"Package Control: List Packages"
 			],
 			[
 				"pick",
@@ -313,10 +325,6 @@
 			[
 				"stat",
 				"Git: Status"
-			],
-			[
-				"dis",
-				"Package Control: Discover Packages"
 			],
 			[
 				"colo",
@@ -375,15 +383,23 @@
 				"Package Control: Remove Package"
 			],
 			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
 				"di",
 				"Package Control: Discover Packages"
 			]
 		],
-		"width": 462.0
+		"width": 476.0
 	},
 	"console":
 	{
-		"height": 242.0
+		"height": 411.0
 	},
 	"distraction_free":
 	{
@@ -396,23 +412,30 @@
 	},
 	"file_history":
 	[
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Instruction_Set.pde",
-		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Processing/Processing.sublime-build",
-		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/test.sublime-build",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Drawbot_Controller.pde",
-		"/Users/jbakse/Desktop/trashme_parser.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Parser.pde",
-		"/Users/jbakse/Documents/projects/drawbot/notes/todo.md",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Bot_Driver.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Settings.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/sketch.properties",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/UserInterface.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Util.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Drawbot_Controller/Visualizer.pde",
-		"/Users/jbakse/Documents/projects/drawbot/Design/bom.txt",
-		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/jbakse/Documents/projects/drawbot/drawbot.sublime-project",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/UserInterface.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot/Drawbot.ino",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Bot_Driver.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Drawbot_Controller.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Settings.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Parser.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Instruction_Set.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/data/circles.svg",
+		"/Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/utility/twi.h",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/.gitignore",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/drawbot.sublime-workspace",
+		"/Users/jbakse/Desktop/test_shake/test_shake.ino",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Arduino Said",
+		"/Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/Wire.h",
+		"/Users/jbakse/Desktop/test_shake/test_shake.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Visualizer.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/notes.txt",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/.gitignore",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Util.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/drawbot.sublime-project",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/Plan.pde",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/notes/todo.md",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Design/bom.txt",
+		"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller/	at Drawbot_Controller$Parser.parseSVG2(Drawbot_Controller.java",
 		"/Users/jbakse/Desktop/pudt1203f13_week4/MSung/MSung_week_3_white_rects_and_circles.pde",
 		"/Users/jbakse/Dropbox/Justin_BNS/PUDT 1203/Spring 2013/Week 6/\n	*Exposition*",
 		"/Users/jbakse/Documents/projects/Printrbot/8020sled/customizable_shaft_coupling.scad",
@@ -491,6 +514,7 @@
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/grid.less",
 		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/Color Scheme - Default/Monokai.tmTheme",
+		"/Users/jbakse/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/.jshintrc",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/_layout.jade",
 		"/Users/jbakse/Documents/projects/justinbaksecom/content/notes.txt",
@@ -515,15 +539,7 @@
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/styles/type.less",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/components/processingjs/processing.js",
 		"/Users/jbakse/Documents/projects/justinbaksecom/dev/app/sketches/background_1/index.html",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/experimental.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/dev/bower.json",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/tsfim/studio_mud/_story.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/resume.jade",
-		"/Users/jbakse/Documents/projects/justinbaksecom/contact.jade",
-		"/tmp/subl stdin tiyylJ.txt",
-		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/new_york/drawbot/story.html",
-		"/Users/jbakse/Documents/projects/justinbaksecom/dev/dist/detroit/one_a_day/story.html",
-		"/Users/jbakse/Documents/projects/justinbaksecom/content/minneapolis/fell_the_window_out/story.jade"
+		"/Users/jbakse/Documents/projects/justinbaksecom/content/experimental.jade"
 	],
 	"find":
 	{
@@ -534,6 +550,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git/Drawbot_Controller",
 			"/Users/jbakse/Documents/projects/justinbaksecom/content",
 			"<project>",
 			"/Users/jbakse/Dropbox/GameDev/jbakse/unity_shooter/Assets/Scripts/design components"
@@ -544,8 +561,44 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"F1000",
-			"F500",
+			"new",
+			"output",
+			"synch",
+			"synchronized",
+			"speed",
+			"FORWARD",
+			"forwar",
+			"accelerize",
+			"startBot",
+			"parser",
+			"stroke",
+			"RG",
+			"parse",
+			"visual",
+			"drawScale",
+			"lastSpeed",
+			"parseSVG2",
+			"_plan",
+			"threshold",
+			"parseSVG",
+			"parseSVG2",
+			"parseSVG",
+			"checkPath",
+			"si",
+			"penDown",
+			"posX",
+			"i",
+			"seg",
+			"i",
+			"penDown",
+			"X",
+			"_x",
+			"_y",
+			"_x",
+			"Instruction_Set",
+			"ACCEL_PASSES",
+			"acce",
+			"Instruction_Set",
 			"Week 2 Assignment",
 			"5, 5",
 			"8",
@@ -635,43 +688,7 @@
 			"value",
 			"println",
 			"rev",
-			"min",
-			"uglify",
-			"'dist",
-			"$(\".portfolio\")",
-			".full",
-			"660",
-			"export",
-			"Processing",
-			"window",
-			"canvas",
-			"%",
-			"\"",
-			"i",
-			"i>",
-			"i",
-			"stress",
-			".story",
-			"extends /_layout",
-			".slide",
-			"      ",
-			"     ",
-			"    ",
-			"   ",
-			"  ",
-			"clean",
-			"gowanus",
-			"story",
-			"story_2",
-			"dotted",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n		\n\n",
-			"\n		\n\n		\n\n		\n\n"
+			"min"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -692,8 +709,64 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Drawbot_Controller/Drawbot_Controller.pde",
+					"settings":
+					{
+						"buffer_size": 6715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								234,
+								234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Drawbot_Controller/Settings.pde",
+					"settings":
+					{
+						"buffer_size": 550,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -730,11 +803,15 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 283.0
+		"height": 313.0
 	},
 	"output.git":
 	{
 		"height": 114.0
+	},
+	"output.test_shake":
+	{
+		"height": 124.0
 	},
 	"replace":
 	{
@@ -746,6 +823,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"driv",
+				"Drawbot_Git/Drawbot_Controller/Bot_Driver.pde"
+			],
+			[
+				"drawiner",
+				"Drawbot_Git/Drawbot_Controller/UserInterface.pde"
+			],
+			[
+				"sett",
+				"Drawbot_Git/Drawbot_Controller/Settings.pde"
+			],
+			[
+				"contr",
+				"Drawbot_Controller/Drawbot_Controller.pde"
+			],
+			[
+				"bot",
+				"Drawbot_Controller/Bot_Driver.pde"
+			],
+			[
+				"par",
+				"Drawbot_Controller/Parser.pde"
+			],
 			[
 				"col",
 				"content/colophon.jade"

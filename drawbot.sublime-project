@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "."
+			"path": "/Users/jbakse/Documents/Dropbox/Justin_BNS/_projects/Drawbot/Drawbot_Git"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/bnscraft"
 		}
 	],
 	"settings":
@@ -11,6 +14,9 @@
 		{
 			"options_default":
 			{
+				"additional_options":
+				[
+				],
 				"break-blocks": "",
 				"break-closing-brackets": true,
 				"indent": "tab",
@@ -18,8 +24,7 @@
 				"max-instatement-indent": 100,
 				"pad-oper": "default",
 				"style": "kr",
-				"unpad-paren": "default",
-				"additional_options": []
+				"unpad-paren": "default"
 			}
 		}
 	}
