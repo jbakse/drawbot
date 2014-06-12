@@ -67,24 +67,24 @@ class Parser
 
 
         //Build Plan
-        println("Build Plan");
+        // println("Build Plan");
 
         Plan plan = new Plan();
         for (int i = 0; i < pointPaths.length; i++)
         {
             if (pointPaths[i] != null && pointPaths.length > 0)
             {
-                println("x " + pointPaths[i][0].x + ", " + pointPaths[i][0].y);
+                // println("x " + pointPaths[i][0].x + ", " + pointPaths[i][0].y);
                 plan.steps.add(new Step(pointPaths[i][0].x, pointPaths[i][0].y,  settings.desiredSpeed, false));
                 for (int j = 1; j < pointPaths[i].length - 1; j++)   // - 1 because polygonizer is giveing a duplicate at the end
                 {
-                    println("  " + pointPaths[i][j].x + ", " + pointPaths[i][j].y);
+                    // println("  " + pointPaths[i][j].x + ", " + pointPaths[i][j].y);
                     plan.steps.add(new Step(pointPaths[i][j].x, pointPaths[i][j].y, settings.desiredSpeed, true));
                 }
             }
         }
 
-
+        /*
         //gcode plan
         {
             float cmScale = .3527;
@@ -155,8 +155,10 @@ class Parser
 
 
             //accelerize plan
-            plan = accelerize(plan);
         }
+        */
+
+        plan = accelerize(plan);
 
 
         //generate instructions
@@ -180,7 +182,7 @@ class Parser
             }
             int x = (int)((step.x * settings.xStepsPerPoint) - posX);
             int y = (int)((step.y * settings.yStepsPerPoint) - posY);
-            println(x + " " + y + " " + (int)step.speed);
+          //  println(x + " " + y + " " + (int)step.speed);
             instructions.appendMove(x, y, (int)step.speed);
             posX += x;
             posY += y;

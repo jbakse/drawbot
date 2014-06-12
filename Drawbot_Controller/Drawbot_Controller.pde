@@ -117,9 +117,12 @@ synchronized void displayInstructions(Instruction_Set instructionSet)
 
 
 
-void serialEvent(Serial port)
+void serialEvent(Serial p)
 {
-    botDriver.serialEvent(port);
+    println("Controller serialEvent");
+    if (botDriver != null) {
+        botDriver.serialEvent(p);
+    }
 }
 
 

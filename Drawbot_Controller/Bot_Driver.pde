@@ -8,7 +8,11 @@ class Bot_Driver
 	Bot_Driver(PApplet _applet)
 	{
 		try {
-			arduinoSerial = new Serial(_applet, Serial.list()[0], 115200);
+			println("Serial List");
+			println(Serial.list());
+
+//			arduinoSerial = new Serial(_applet, Serial.list()[0], 115200);
+			arduinoSerial = new Serial(_applet, "/dev/cu.usbmodem1411", 115200);
 			arduinoSerial.bufferUntil('\n');
 		} catch (Exception e) {
 			println("Problem connecting to arduino");
@@ -24,9 +28,11 @@ class Bot_Driver
 
 
 
-	void serialEvent(Serial port)
+	void serialEvent(Serial p)
 	{
+		println("serialEvent");
 		String inString = arduinoSerial.readStringUntil('\n');
+		println("read string success");
 		inString = trim(inString);
 		println("Arduino Said: " + inString);
 		if (inString.equals("done")) {
@@ -70,6 +76,7 @@ class Bot_Driver
 
 	void sendNext()
 	{
+
 		if (instructionSet == null) return;
 		if (currentInstruction >= instructionSet.instructions.size()) return;
 		sendInstruction((Instruction)instructionSet.instructions.get(currentInstruction));
