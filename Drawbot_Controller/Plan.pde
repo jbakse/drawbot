@@ -4,6 +4,10 @@ class Plan
     Plan(){
     	steps = new ArrayList<Step>();
     }
+
+    Plan(Plan _plan){
+        steps = new ArrayList<Step>(_plan.steps);
+    }
 };
 
 class Step
