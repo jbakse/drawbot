@@ -7,8 +7,11 @@ class Visualizer
         // currentLoc = new PVector(10.0, 10.0);
     }
 
+   
+
     void draw(Instruction_Set instructionSet, int currentInstruction)
     {
+        // float colorSpin = 0;
         pushMatrix();
         {
             translate(10.0, 10.0);
@@ -50,6 +53,10 @@ class Visualizer
                             stroke(instruction.params[2] * 2.5, 0, 0);
                         }
                     }
+
+                    // colorMode(HSB, 255);
+                    // colorSpin += .1;
+                    // stroke(colorSpin % 255, 255, 255);
 
                     line(pos.x / settings.xStepsPerPixel, pos.y / settings.yStepsPerPixel,
                          (pos.x + instruction.params[0]) / settings.xStepsPerPixel, (pos.y + instruction.params[1]) / settings.yStepsPerPixel);

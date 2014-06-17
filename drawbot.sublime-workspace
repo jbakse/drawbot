@@ -135,15 +135,24 @@
 			"file": "Drawbot_Controller/Drawbot_Controller.pde",
 			"settings":
 			{
-				"buffer_size": 6715,
+				"buffer_size": 2476,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jbakse/Desktop/notes",
+			"settings":
+			{
+				"buffer_size": 186,
+				"line_ending": "Unix",
+				"name": "100rpm  43seconds"
 			}
 		},
 		{
 			"file": "Drawbot_Controller/Settings.pde",
 			"settings":
 			{
-				"buffer_size": 550,
+				"buffer_size": 558,
 				"line_ending": "Unix"
 			}
 		}
@@ -399,7 +408,11 @@
 	},
 	"console":
 	{
-		"height": 411.0
+		"height": 411.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
 	},
 	"distraction_free":
 	{
@@ -709,23 +722,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "Drawbot_Controller/Drawbot_Controller.pde",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6715,
+						"buffer_size": 2476,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								234,
-								234
+								272,
+								272
 							]
 						],
 						"settings":
@@ -738,33 +752,66 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Drawbot_Controller/Settings.pde",
+					"file": "/Users/jbakse/Desktop/notes",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 550,
+						"buffer_size": 186,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								259,
-								259
+								186,
+								186
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_name": "100rpm  43seconds",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Drawbot_Controller/Settings.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"SideBarAutoAddFoldersForOpenedFiles": 1,
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 29.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -805,6 +852,10 @@
 	{
 		"height": 313.0
 	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
 	"output.git":
 	{
 		"height": 114.0
@@ -813,6 +864,7 @@
 	{
 		"height": 124.0
 	},
+	"project": "drawbot.sublime-project",
 	"replace":
 	{
 		"height": 64.0
@@ -1098,10 +1150,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 249.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

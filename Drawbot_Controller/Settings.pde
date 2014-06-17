@@ -9,9 +9,9 @@ class Settings
 	public int accelPasses = 3;
 
 	public float xStepsPerPoint = 1 * (10/7.218) * 2;
-	public float yStepsPerPoint = 1 * (10/6.875) * 2;
+	public float yStepsPerPoint = 1 * (10/6.875) * 2 * .66;
 	public float xStepsPerPixel = 30;
-	public float yStepsPerPixel = 30;
+	public float yStepsPerPixel = 30 * .66;
 
 	public float canvasWidthPoints = 60 * 72;
 	public float canvasHeightPoints = 25 * 72;

@@ -49,6 +49,8 @@ void stepX(int steps, int d, int type)
 }
 void stepY(int steps, int d, int type)
 {
+//  int d2 = FORWARD;
+//  if (d == FORWARD) d2 = BACKWARD;
   yMotor->step(steps, d, type);
 }
 void setXSpeed(int speed)
@@ -68,7 +70,7 @@ void releaseMotors()
 
 
 //config
-int stepType = INTERLEAVE; //SINGLE DOUBLE INTERLEAVE MICROSTEP
+int stepType = INTERLEAVE; //SINGLE DOUBLE (INTERLEAVE) MICROSTEP
 
 #include <Servo.h>
 
@@ -159,7 +161,7 @@ void homeXY()
   boolean left = true;
 
   while (up || left) {
-    if (up) stepY(1, BACKWARD, stepType); // Y is wired backwards
+    if (up) stepY(1, FORWARD, stepType); // Y is wired backwards
     if (left) stepX(1, BACKWARD, stepType); 
 
     if (digitalRead(yStopPin) == 0) up = false;
@@ -170,8 +172,9 @@ void homeXY()
 
 void pen(int angle)
 {
+  delay(200);
   penServo.write(angle);
-  delay(25);
+  delay(200);
 }
 
 int maxSpeed;
@@ -197,10 +200,10 @@ void moveSteps(long xSteps, long ySteps)
   }
 
   int xDirection = FORWARD;
-  if (xSteps < 0) xDirection = BACKWARD;
+  if (xSteps < 0) xDirection = BACKWARD; //y is backwards?
 
-  int yDirection = FORWARD; 
-  if (ySteps < 0) yDirection = BACKWARD;
+  int yDirection = BACKWARD; 
+  if (ySteps < 0) yDirection = FORWARD;
 
 
   int xStepped = 0;

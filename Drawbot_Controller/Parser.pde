@@ -53,10 +53,14 @@ class Parser {
         }
 
 
+        pointPaths = sortShapes(pointPaths);
+
 
         // Build Inital Plan
         // Build plan by copying vector points, all at full speed.
         Plan plan = new Plan();
+        plan.steps.add(new Step(0, 0, settings.desiredSpeed, false));
+
         for (int i = 0; i < pointPaths.length; i++) {
             if (pointPaths[i] != null && pointPaths[i].length > 0) {
                 plan.steps.add(new Step(pointPaths[i][0].x, pointPaths[i][0].y, settings.desiredSpeed, false));
@@ -66,6 +70,13 @@ class Parser {
             }
         }
 
+        float t = 0;
+        for (int i = 1; i < plan.steps.size(); ++i) {
+            float deltaX = plan.steps.get(i).x -  plan.steps.get(i-1).x;
+            float deltaY = plan.steps.get(i).y -  plan.steps.get(i-1).y;
+            t += sqrt(deltaX * deltaX + deltaY * deltaY);
+        }
+        println("Travel Distance: " + t);
 
         plan = segmentize(plan);
         plan = accelerize(plan);
@@ -95,14 +106,16 @@ class Parser {
             posY += y;
         }
 
+        instructions.appendPenUp();
 
-        {
-            PrintWriter output = createWriter("output.bot");
-            output.println(instructions.toString());
 
-            output.flush();
-            output.close();
-        }
+        // {
+        //     PrintWriter output = createWriter("output.bot");
+        //     output.println(instructions.toString());
+
+        //     output.flush();
+        //     output.close();
+        // }
 
         return instructions;
 
@@ -116,6 +129,66 @@ class Parser {
 
 
 };
+
+
+
+RPoint[][] sortShapes(RPoint[][] _pointPaths) {
+
+    RPoint[][] orderedPointPaths = new RPoint[_pointPaths.length][0];
+    int orderedPointPathsIndex = 0;
+
+    ArrayList<Integer> visitedShapes = new ArrayList<Integer>();
+
+
+    float currentX = 0;
+    float currentY = 0;
+
+    // loop while unvisited shapes
+    while (visitedShapes.size() < _pointPaths.length)
+    {
+        // find closest unvisited shape
+        int closestIndex = -1;
+        float closestDistance = 1000000;
+        for (int i = 0; i < _pointPaths.length; i++) {
+            if (visitedShapes.contains(i)) continue;
+            float shapeX = _pointPaths[i][0].x;
+            float shapeY = _pointPaths[i][0].y;
+            float deltaX = shapeX - currentX;
+            float deltaY = shapeY - currentY;
+            
+            float shapeDistance = sqrt(deltaX * deltaX + deltaY * deltaY);
+
+            if (shapeDistance < closestDistance) {
+                closestDistance = shapeDistance;
+                closestIndex = i;
+            }
+        }
+
+        // mark visited
+        visitedShapes.add(closestIndex);
+        
+        // copy to sorted shapes
+        orderedPointPaths[orderedPointPathsIndex] = new RPoint[_pointPaths[closestIndex].length];
+        arrayCopy(_pointPaths[closestIndex], orderedPointPaths[orderedPointPathsIndex]);
+        orderedPointPathsIndex++;
+
+        currentX=_pointPaths[closestIndex][0].x;
+        currentY=_pointPaths[closestIndex][0].y;
+
+    }
+
+
+
+    // for (int i = 0; i < _pointPaths.length; i++) {
+    //     orderedPointPaths[i] = new RPoint[_pointPaths[i].length];
+    //     arrayCopy(_pointPaths[i], orderedPointPaths[i]);
+    // }
+
+
+    return orderedPointPaths;
+}
+
+
 
 
 // find steps in plan that are longer than SEGMENT_SIZE, break these steps into multiple steps of the same length near SEGMENT_SIZE
@@ -162,7 +235,7 @@ Plan accelerize(Plan _plan) {
     stepVectors = new ArrayList<PVector>();
     stepVectors.add(new PVector(0, 0));
 
-    
+
     for (int i = 1; i < accelerizedPlan.steps.size(); i++) {
         float startX = accelerizedPlan.steps.get(i - 1).x;
         float startY = accelerizedPlan.steps.get(i - 1).y;
@@ -179,7 +252,7 @@ Plan accelerize(Plan _plan) {
     float thresholdX = .25;
     float thresholdY = .25;
     accelerizedPlan.steps.get(0).speed = settings.accelMinSpeed;
-    println(accelerizedPlan.steps.size() + " sizes " + stepVectors.size());
+    // println(accelerizedPlan.steps.size() + " sizes " + stepVectors.size());
     for (int i = 1; i < accelerizedPlan.steps.size(); i++) {
         if (abs(stepVectors.get(i).x - stepVectors.get(i - 1).x) > thresholdX
                 ||
